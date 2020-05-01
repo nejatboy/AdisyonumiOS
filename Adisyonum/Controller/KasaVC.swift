@@ -35,8 +35,26 @@ class KasaVC: UIViewController {
         
         collectionViewMasalar.delegate = self
         collectionViewMasalar.dataSource = self
+        hucreTasariminiAyarla()
         
         masalariOlustur()
+        
+        
+    }
+    
+    
+    
+    
+    func hucreTasariminiAyarla() {
+        let tasarim = UICollectionViewFlowLayout()  //Tasarımların çoğunu bunla yaparız
+        let genislik = collectionViewMasalar.frame.size.width  //CollectionView'ın yayıldığı alanın genişliğini aldım
+        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)   //Hücre ile collectionView arası boşluklar
+        tasarim.minimumInteritemSpacing = 10     //yatayda hücreler arası boşluk
+        tasarim.minimumLineSpacing = 10  //Dikeyde hücreler arası boşluk
+        let hucreKenarUzunluk = (genislik - 70) / 6
+        tasarim.itemSize = CGSize(width: hucreKenarUzunluk,  height: hucreKenarUzunluk)
+        tasarim.scrollDirection = UICollectionView.ScrollDirection.vertical
+        collectionViewMasalar.collectionViewLayout = tasarim   //Hazırladığım tasarımı aktardım
     }
     
     
@@ -100,10 +118,13 @@ extension KasaVC: UICollectionViewDelegate, UICollectionViewDataSource {
             
             if masa.masaAcik && masa.masaYazdirildi {
                 //MAVİ
+                cell.backgroundColor = UIColor(named: "yazdirilmisMasaHucreRengi")
             } else if masa.masaAcik {
                 //KIRMIZI
+                cell.backgroundColor = UIColor(named: "doluMasaHucreRengi")
             } else {
                 // YEŞİL
+                cell.backgroundColor = UIColor(named: "bosMasaHucreRengi")
             }
             
             cell.labelHesap.text = "\(masa.masaTutar) TL"

@@ -186,48 +186,48 @@
                                 <rect key="frame" x="20" y="0.0" width="647" height="375"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hOj-Ng-RSt">
-                                    <size key="itemSize" width="63" height="63"/>
+                                    <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hucreMasa_KasaVC" id="eTq-je-0Nb" customClass="HucreMasa_KasaVC" customModule="Adisyonum" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="np1-U4-pYh">
-                                            <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2wC-3c-NFO">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHz-OH-WFQ">
-                                                    <rect key="frame" x="27.5" y="21" width="8" height="21"/>
+                                                    <rect key="frame" x="56" y="49.5" width="8" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garson Adı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8D-0H-kAZ">
-                                                    <rect key="frame" x="10" y="6" width="43.5" height="10"/>
+                                                    <rect key="frame" x="38.5" y="34.5" width="43.5" height="10"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doU-4k-6sd">
-                                                    <rect key="frame" x="33" y="48" width="25" height="10"/>
+                                                    <rect key="frame" x="90" y="105" width="25" height="10"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JHz-OH-WFQ" firstAttribute="centerY" secondItem="np1-U4-pYh" secondAttribute="centerY" id="6Pi-8M-6bT"/>
+                                                <constraint firstItem="JHz-OH-WFQ" firstAttribute="centerY" secondItem="2wC-3c-NFO" secondAttribute="centerY" id="6Pi-8M-6bT"/>
                                                 <constraint firstAttribute="trailing" secondItem="doU-4k-6sd" secondAttribute="trailing" constant="5" id="72U-gf-QrL"/>
                                                 <constraint firstAttribute="bottom" secondItem="doU-4k-6sd" secondAttribute="bottom" constant="5" id="Wmu-Ar-FNC"/>
-                                                <constraint firstItem="JHz-OH-WFQ" firstAttribute="centerX" secondItem="np1-U4-pYh" secondAttribute="centerX" id="dmE-Fd-Cl3"/>
-                                                <constraint firstItem="g8D-0H-kAZ" firstAttribute="centerX" secondItem="np1-U4-pYh" secondAttribute="centerX" id="mbb-c7-STy"/>
+                                                <constraint firstItem="JHz-OH-WFQ" firstAttribute="centerX" secondItem="2wC-3c-NFO" secondAttribute="centerX" id="dmE-Fd-Cl3"/>
+                                                <constraint firstItem="g8D-0H-kAZ" firstAttribute="centerX" secondItem="2wC-3c-NFO" secondAttribute="centerX" id="mbb-c7-STy"/>
                                                 <constraint firstItem="JHz-OH-WFQ" firstAttribute="top" secondItem="g8D-0H-kAZ" secondAttribute="bottom" constant="5" id="vs0-Nl-IhZ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="63" height="63"/>
+                                        <size key="customSize" width="120" height="120"/>
                                         <connections>
                                             <outlet property="labelGarsonAd" destination="g8D-0H-kAZ" id="MWp-Bn-Qez"/>
                                             <outlet property="labelHesap" destination="doU-4k-6sd" id="VB6-Rc-gOm"/>
