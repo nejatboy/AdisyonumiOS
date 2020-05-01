@@ -1,0 +1,6 @@
+framework module Pods_Adisyonum_AdisyonumUITests {
+  umbrella header "Pods-Adisyonum-AdisyonumUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

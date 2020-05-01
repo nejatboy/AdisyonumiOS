@@ -1,0 +1,946 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BE62FE4342927FB2BB101B4 /* Pods_AdisyonumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C580D7618C16ED3EE92A7CD /* Pods_AdisyonumTests.framework */; };
+		319AD307FA1A1A6783A976B1 /* Pods_Adisyonum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950C0F407751504315555692 /* Pods_Adisyonum.framework */; };
+		AE2BCDC2A0BF9E6657828509 /* Pods_Adisyonum_AdisyonumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4C0E6903DA47FA2796AC0F /* Pods_Adisyonum_AdisyonumUITests.framework */; };
+		D901E7A724535D420058A388 /* HucreAcikMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D901E7A624535D420058A388 /* HucreAcikMasa.swift */; };
+		D90866AC24503E4D00554691 /* KasaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90866AB24503E4C00554691 /* KasaVC.swift */; };
+		D908FF2624573B73007CDCD4 /* HucreGarson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D908FF2524573B73007CDCD4 /* HucreGarson.swift */; };
+		D90964F2245317A400A010CB /* HucreGoruntulenenUrun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90964F1245317A400A010CB /* HucreGoruntulenenUrun.swift */; };
+		D90EEDD12450B19A00F0E2D1 /* RestoranlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90EEDD02450B19A00F0E2D1 /* RestoranlarVC.swift */; };
+		D90EEDD32450B1AC00F0E2D1 /* GarsonlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90EEDD22450B1AC00F0E2D1 /* GarsonlarVC.swift */; };
+		D90EEDD52450B1C100F0E2D1 /* KategorilerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90EEDD42450B1C100F0E2D1 /* KategorilerVC.swift */; };
+		D90EEDD72450B1D300F0E2D1 /* UrunlerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90EEDD62450B1D300F0E2D1 /* UrunlerVC.swift */; };
+		D91771C52458D5F500136463 /* HucreKategori.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91771C42458D5F400136463 /* HucreKategori.swift */; };
+		D91BD527245B08BD00BDFDC6 /* UrunEkleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91BD526245B08BD00BDFDC6 /* UrunEkleVC.swift */; };
+		D93D25C724504B2F00B31E9D /* AcikMasalarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93D25C624504B2F00B31E9D /* AcikMasalarVC.swift */; };
+		D9420255244F314D007045A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9420254244F314D007045A4 /* GoogleService-Info.plist */; };
+		D9420257244F4F87007045A4 /* Restoran.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9420256244F4F87007045A4 /* Restoran.swift */; };
+		D9420259244F645F007045A4 /* Garson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9420258244F645F007045A4 /* Garson.swift */; };
+		D942025B244F653E007045A4 /* Kategori.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942025A244F653E007045A4 /* Kategori.swift */; };
+		D942025D244F65AB007045A4 /* Urun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942025C244F65AB007045A4 /* Urun.swift */; };
+		D942025F244F9F84007045A4 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942025E244F9F84007045A4 /* Singleton.swift */; };
+		D9420261244FA4D6007045A4 /* TumMasalarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9420260244FA4D6007045A4 /* TumMasalarVC.swift */; };
+		D95E2FF024520C38009E6F8E /* HucreUrun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E2FEF24520C38009E6F8E /* HucreUrun.swift */; };
+		D95E2FF224520D13009E6F8E /* HucreSiparis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E2FF124520D13009E6F8E /* HucreSiparis.swift */; };
+		D963281224586C3A001E78CD /* Dialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D963281124586C3A001E78CD /* Dialog.storyboard */; };
+		D963281424586CB2001E78CD /* GarsonEkleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963281324586CB2001E78CD /* GarsonEkleVC.swift */; };
+		D963281624586EA3001E78CD /* YeniDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963281524586EA3001E78CD /* YeniDialogView.swift */; };
+		D965A432245C48F600FF0577 /* HucreMasa_KasaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */; };
+		D97BFFF92455A9BF00580C4C /* HucreRestoran.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */; };
+		D981D3412450E74100B9B3F4 /* Masa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981D3402450E74100B9B3F4 /* Masa.swift */; };
+		D985B839244E3929001D559A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B838244E3929001D559A /* AppDelegate.swift */; };
+		D985B83B244E3929001D559A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B83A244E3929001D559A /* SceneDelegate.swift */; };
+		D985B83D244E3929001D559A /* GirisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B83C244E3929001D559A /* GirisVC.swift */; };
+		D985B840244E3929001D559A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D985B83E244E3929001D559A /* Main.storyboard */; };
+		D985B842244E392C001D559A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D985B841244E392C001D559A /* Assets.xcassets */; };
+		D985B845244E392C001D559A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D985B843244E392C001D559A /* LaunchScreen.storyboard */; };
+		D985B850244E392C001D559A /* AdisyonumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B84F244E392C001D559A /* AdisyonumTests.swift */; };
+		D985B85B244E392C001D559A /* AdisyonumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B85A244E392C001D559A /* AdisyonumUITests.swift */; };
+		D9B3A6EB24549C22001461B4 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B3A6EA24549C22001461B4 /* DialogView.swift */; };
+		D9D4D6A72450E2CF0069EFE0 /* HucreTumMasalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4D6A62450E2CF0069EFE0 /* HucreTumMasalar.swift */; };
+		D9E35D4B2459F83800AECD91 /* HucreUrun_Yonetici.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E35D4A2459F83800AECD91 /* HucreUrun_Yonetici.swift */; };
+		D9E6730E2459720000DD9392 /* KategoriEkleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E6730D2459720000DD9392 /* KategoriEkleVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D985B84C244E392C001D559A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D985B82D244E3929001D559A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D985B834244E3929001D559A;
+			remoteInfo = Adisyonum;
+		};
+		D985B857244E392C001D559A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D985B82D244E3929001D559A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D985B834244E3929001D559A;
+			remoteInfo = Adisyonum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18F420E81F26FF016ABE4B2B /* Pods-Adisyonum-AdisyonumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyonum-AdisyonumUITests.release.xcconfig"; path = "Target Support Files/Pods-Adisyonum-AdisyonumUITests/Pods-Adisyonum-AdisyonumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2C580D7618C16ED3EE92A7CD /* Pods_AdisyonumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdisyonumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BCF9CF1DAEEAF7E150FA95C /* Pods-Adisyonum-AdisyonumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyonum-AdisyonumUITests.debug.xcconfig"; path = "Target Support Files/Pods-Adisyonum-AdisyonumUITests/Pods-Adisyonum-AdisyonumUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D4C0E6903DA47FA2796AC0F /* Pods_Adisyonum_AdisyonumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adisyonum_AdisyonumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		819A24546BBF1977E6336BA0 /* Pods-AdisyonumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdisyonumTests.release.xcconfig"; path = "Target Support Files/Pods-AdisyonumTests/Pods-AdisyonumTests.release.xcconfig"; sourceTree = "<group>"; };
+		950C0F407751504315555692 /* Pods_Adisyonum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adisyonum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		979AC407D1661BDBF62B3E8E /* Pods-AdisyonumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdisyonumTests.debug.xcconfig"; path = "Target Support Files/Pods-AdisyonumTests/Pods-AdisyonumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C519953504F88C858F66CB6 /* Pods-Adisyonum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyonum.release.xcconfig"; path = "Target Support Files/Pods-Adisyonum/Pods-Adisyonum.release.xcconfig"; sourceTree = "<group>"; };
+		D901E7A624535D420058A388 /* HucreAcikMasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreAcikMasa.swift; sourceTree = "<group>"; };
+		D90866AB24503E4C00554691 /* KasaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KasaVC.swift; sourceTree = "<group>"; };
+		D908FF2524573B73007CDCD4 /* HucreGarson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreGarson.swift; sourceTree = "<group>"; };
+		D90964F1245317A400A010CB /* HucreGoruntulenenUrun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreGoruntulenenUrun.swift; sourceTree = "<group>"; };
+		D90EEDD02450B19A00F0E2D1 /* RestoranlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranlarVC.swift; sourceTree = "<group>"; };
+		D90EEDD22450B1AC00F0E2D1 /* GarsonlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarsonlarVC.swift; sourceTree = "<group>"; };
+		D90EEDD42450B1C100F0E2D1 /* KategorilerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategorilerVC.swift; sourceTree = "<group>"; };
+		D90EEDD62450B1D300F0E2D1 /* UrunlerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerVC.swift; sourceTree = "<group>"; };
+		D91771C42458D5F400136463 /* HucreKategori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreKategori.swift; sourceTree = "<group>"; };
+		D91BD526245B08BD00BDFDC6 /* UrunEkleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunEkleVC.swift; sourceTree = "<group>"; };
+		D93D25C624504B2F00B31E9D /* AcikMasalarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcikMasalarVC.swift; sourceTree = "<group>"; };
+		D9420254244F314D007045A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D9420256244F4F87007045A4 /* Restoran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restoran.swift; sourceTree = "<group>"; };
+		D9420258244F645F007045A4 /* Garson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garson.swift; sourceTree = "<group>"; };
+		D942025A244F653E007045A4 /* Kategori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategori.swift; sourceTree = "<group>"; };
+		D942025C244F65AB007045A4 /* Urun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urun.swift; sourceTree = "<group>"; };
+		D942025E244F9F84007045A4 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		D9420260244FA4D6007045A4 /* TumMasalarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumMasalarVC.swift; sourceTree = "<group>"; };
+		D95E2FEF24520C38009E6F8E /* HucreUrun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreUrun.swift; sourceTree = "<group>"; };
+		D95E2FF124520D13009E6F8E /* HucreSiparis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreSiparis.swift; sourceTree = "<group>"; };
+		D963281124586C3A001E78CD /* Dialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dialog.storyboard; sourceTree = "<group>"; };
+		D963281324586CB2001E78CD /* GarsonEkleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarsonEkleVC.swift; sourceTree = "<group>"; };
+		D963281524586EA3001E78CD /* YeniDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeniDialogView.swift; sourceTree = "<group>"; };
+		D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreMasa_KasaVC.swift; sourceTree = "<group>"; };
+		D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreRestoran.swift; sourceTree = "<group>"; };
+		D981D3402450E74100B9B3F4 /* Masa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masa.swift; sourceTree = "<group>"; };
+		D985B835244E3929001D559A /* Adisyonum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adisyonum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D985B838244E3929001D559A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D985B83A244E3929001D559A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D985B83C244E3929001D559A /* GirisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisVC.swift; sourceTree = "<group>"; };
+		D985B83F244E3929001D559A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D985B841244E392C001D559A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D985B844244E392C001D559A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D985B846244E392C001D559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D985B84B244E392C001D559A /* AdisyonumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdisyonumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D985B84F244E392C001D559A /* AdisyonumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdisyonumTests.swift; sourceTree = "<group>"; };
+		D985B851244E392C001D559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D985B856244E392C001D559A /* AdisyonumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdisyonumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D985B85A244E392C001D559A /* AdisyonumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdisyonumUITests.swift; sourceTree = "<group>"; };
+		D985B85C244E392C001D559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B3A6EA24549C22001461B4 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
+		D9D4D6A62450E2CF0069EFE0 /* HucreTumMasalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreTumMasalar.swift; sourceTree = "<group>"; };
+		D9E35D4A2459F83800AECD91 /* HucreUrun_Yonetici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreUrun_Yonetici.swift; sourceTree = "<group>"; };
+		D9E6730D2459720000DD9392 /* KategoriEkleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriEkleVC.swift; sourceTree = "<group>"; };
+		DAE80C2BFB3815B6AF05EEA5 /* Pods-Adisyonum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyonum.debug.xcconfig"; path = "Target Support Files/Pods-Adisyonum/Pods-Adisyonum.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D985B832244E3929001D559A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319AD307FA1A1A6783A976B1 /* Pods_Adisyonum.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D985B848244E392C001D559A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BE62FE4342927FB2BB101B4 /* Pods_AdisyonumTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D985B853244E392C001D559A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2BCDC2A0BF9E6657828509 /* Pods_Adisyonum_AdisyonumUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03525E9B10D5D6536DC43C7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAE80C2BFB3815B6AF05EEA5 /* Pods-Adisyonum.debug.xcconfig */,
+				9C519953504F88C858F66CB6 /* Pods-Adisyonum.release.xcconfig */,
+				6BCF9CF1DAEEAF7E150FA95C /* Pods-Adisyonum-AdisyonumUITests.debug.xcconfig */,
+				18F420E81F26FF016ABE4B2B /* Pods-Adisyonum-AdisyonumUITests.release.xcconfig */,
+				979AC407D1661BDBF62B3E8E /* Pods-AdisyonumTests.debug.xcconfig */,
+				819A24546BBF1977E6336BA0 /* Pods-AdisyonumTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		332926C696914907FC8B2FEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				950C0F407751504315555692 /* Pods_Adisyonum.framework */,
+				7D4C0E6903DA47FA2796AC0F /* Pods_Adisyonum_AdisyonumUITests.framework */,
+				2C580D7618C16ED3EE92A7CD /* Pods_AdisyonumTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D90866AD2450483200554691 /* GarsonVC */ = {
+			isa = PBXGroup;
+			children = (
+				D9420260244FA4D6007045A4 /* TumMasalarVC.swift */,
+				D93D25C624504B2F00B31E9D /* AcikMasalarVC.swift */,
+			);
+			path = GarsonVC;
+			sourceTree = "<group>";
+		};
+		D90EEDCF2450B18000F0E2D1 /* YoneticiVC */ = {
+			isa = PBXGroup;
+			children = (
+				D90EEDD02450B19A00F0E2D1 /* RestoranlarVC.swift */,
+				D90EEDD22450B1AC00F0E2D1 /* GarsonlarVC.swift */,
+				D90EEDD42450B1C100F0E2D1 /* KategorilerVC.swift */,
+				D90EEDD62450B1D300F0E2D1 /* UrunlerVC.swift */,
+			);
+			path = YoneticiVC;
+			sourceTree = "<group>";
+		};
+		D963281024586C0D001E78CD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D985B843244E392C001D559A /* LaunchScreen.storyboard */,
+				D985B83E244E3929001D559A /* Main.storyboard */,
+				D963281124586C3A001E78CD /* Dialog.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D965A430245C47F500FF0577 /* Kasa */ = {
+			isa = PBXGroup;
+			children = (
+				D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */,
+			);
+			path = Kasa;
+			sourceTree = "<group>";
+		};
+		D97BFFF72455A92600580C4C /* Yonetici */ = {
+			isa = PBXGroup;
+			children = (
+				D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */,
+				D908FF2524573B73007CDCD4 /* HucreGarson.swift */,
+				D963281324586CB2001E78CD /* GarsonEkleVC.swift */,
+				D91771C42458D5F400136463 /* HucreKategori.swift */,
+				D9E6730D2459720000DD9392 /* KategoriEkleVC.swift */,
+				D9E35D4A2459F83800AECD91 /* HucreUrun_Yonetici.swift */,
+				D91BD526245B08BD00BDFDC6 /* UrunEkleVC.swift */,
+			);
+			name = Yonetici;
+			path = "Yönet";
+			sourceTree = "<group>";
+		};
+		D985B82C244E3929001D559A = {
+			isa = PBXGroup;
+			children = (
+				D985B837244E3929001D559A /* Adisyonum */,
+				D985B84E244E392C001D559A /* AdisyonumTests */,
+				D985B859244E392C001D559A /* AdisyonumUITests */,
+				D985B836244E3929001D559A /* Products */,
+				03525E9B10D5D6536DC43C7A /* Pods */,
+				332926C696914907FC8B2FEA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D985B836244E3929001D559A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D985B835244E3929001D559A /* Adisyonum.app */,
+				D985B84B244E392C001D559A /* AdisyonumTests.xctest */,
+				D985B856244E392C001D559A /* AdisyonumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D985B837244E3929001D559A /* Adisyonum */ = {
+			isa = PBXGroup;
+			children = (
+				D963281024586C0D001E78CD /* Storyboard */,
+				D9420254244F314D007045A4 /* GoogleService-Info.plist */,
+				D985B86B244E396B001D559A /* Controller */,
+				D985B86A244E395E001D559A /* View */,
+				D985B869244E3952001D559A /* Model */,
+				D985B868244E3941001D559A /* Delegate */,
+				D985B841244E392C001D559A /* Assets.xcassets */,
+				D985B846244E392C001D559A /* Info.plist */,
+			);
+			path = Adisyonum;
+			sourceTree = "<group>";
+		};
+		D985B84E244E392C001D559A /* AdisyonumTests */ = {
+			isa = PBXGroup;
+			children = (
+				D985B84F244E392C001D559A /* AdisyonumTests.swift */,
+				D985B851244E392C001D559A /* Info.plist */,
+			);
+			path = AdisyonumTests;
+			sourceTree = "<group>";
+		};
+		D985B859244E392C001D559A /* AdisyonumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D985B85A244E392C001D559A /* AdisyonumUITests.swift */,
+				D985B85C244E392C001D559A /* Info.plist */,
+			);
+			path = AdisyonumUITests;
+			sourceTree = "<group>";
+		};
+		D985B868244E3941001D559A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D985B83A244E3929001D559A /* SceneDelegate.swift */,
+				D985B838244E3929001D559A /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		D985B869244E3952001D559A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9420256244F4F87007045A4 /* Restoran.swift */,
+				D9420258244F645F007045A4 /* Garson.swift */,
+				D942025A244F653E007045A4 /* Kategori.swift */,
+				D942025C244F65AB007045A4 /* Urun.swift */,
+				D942025E244F9F84007045A4 /* Singleton.swift */,
+				D981D3402450E74100B9B3F4 /* Masa.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D985B86A244E395E001D559A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D965A430245C47F500FF0577 /* Kasa */,
+				D97BFFF72455A92600580C4C /* Yonetici */,
+				D9D4D6A82450E2D70069EFE0 /* Garson */,
+				D9B3A6EA24549C22001461B4 /* DialogView.swift */,
+				D963281524586EA3001E78CD /* YeniDialogView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D985B86B244E396B001D559A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D90EEDCF2450B18000F0E2D1 /* YoneticiVC */,
+				D90866AD2450483200554691 /* GarsonVC */,
+				D985B83C244E3929001D559A /* GirisVC.swift */,
+				D90866AB24503E4C00554691 /* KasaVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9D4D6A82450E2D70069EFE0 /* Garson */ = {
+			isa = PBXGroup;
+			children = (
+				D9D4D6A62450E2CF0069EFE0 /* HucreTumMasalar.swift */,
+				D95E2FEF24520C38009E6F8E /* HucreUrun.swift */,
+				D95E2FF124520D13009E6F8E /* HucreSiparis.swift */,
+				D901E7A624535D420058A388 /* HucreAcikMasa.swift */,
+				D90964F1245317A400A010CB /* HucreGoruntulenenUrun.swift */,
+			);
+			path = Garson;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D985B834244E3929001D559A /* Adisyonum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D985B85F244E392C001D559A /* Build configuration list for PBXNativeTarget "Adisyonum" */;
+			buildPhases = (
+				37778C6EF12AC7759569C167 /* [CP] Check Pods Manifest.lock */,
+				D985B831244E3929001D559A /* Sources */,
+				D985B832244E3929001D559A /* Frameworks */,
+				D985B833244E3929001D559A /* Resources */,
+				294C1BC7D15A82E5F3F41AB7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Adisyonum;
+			productName = Adisyonum;
+			productReference = D985B835244E3929001D559A /* Adisyonum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D985B84A244E392C001D559A /* AdisyonumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D985B862244E392C001D559A /* Build configuration list for PBXNativeTarget "AdisyonumTests" */;
+			buildPhases = (
+				88854FE7FF70FD4AF2F915F1 /* [CP] Check Pods Manifest.lock */,
+				D985B847244E392C001D559A /* Sources */,
+				D985B848244E392C001D559A /* Frameworks */,
+				D985B849244E392C001D559A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D985B84D244E392C001D559A /* PBXTargetDependency */,
+			);
+			name = AdisyonumTests;
+			productName = AdisyonumTests;
+			productReference = D985B84B244E392C001D559A /* AdisyonumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D985B855244E392C001D559A /* AdisyonumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D985B865244E392C001D559A /* Build configuration list for PBXNativeTarget "AdisyonumUITests" */;
+			buildPhases = (
+				40C6393D30A810BAE0D17EEB /* [CP] Check Pods Manifest.lock */,
+				D985B852244E392C001D559A /* Sources */,
+				D985B853244E392C001D559A /* Frameworks */,
+				D985B854244E392C001D559A /* Resources */,
+				41820F2057B749F348BA83ED /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D985B858244E392C001D559A /* PBXTargetDependency */,
+			);
+			name = AdisyonumUITests;
+			productName = AdisyonumUITests;
+			productReference = D985B856244E392C001D559A /* AdisyonumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D985B82D244E3929001D559A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Nejat Boy";
+				TargetAttributes = {
+					D985B834244E3929001D559A = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					D985B84A244E392C001D559A = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = D985B834244E3929001D559A;
+					};
+					D985B855244E392C001D559A = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = D985B834244E3929001D559A;
+					};
+				};
+			};
+			buildConfigurationList = D985B830244E3929001D559A /* Build configuration list for PBXProject "Adisyonum" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D985B82C244E3929001D559A;
+			productRefGroup = D985B836244E3929001D559A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D985B834244E3929001D559A /* Adisyonum */,
+				D985B84A244E392C001D559A /* AdisyonumTests */,
+				D985B855244E392C001D559A /* AdisyonumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D985B833244E3929001D559A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D985B845244E392C001D559A /* LaunchScreen.storyboard in Resources */,
+				D9420255244F314D007045A4 /* GoogleService-Info.plist in Resources */,
+				D963281224586C3A001E78CD /* Dialog.storyboard in Resources */,
+				D985B842244E392C001D559A /* Assets.xcassets in Resources */,
+				D985B840244E3929001D559A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D985B849244E392C001D559A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D985B854244E392C001D559A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		294C1BC7D15A82E5F3F41AB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adisyonum/Pods-Adisyonum-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adisyonum/Pods-Adisyonum-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Adisyonum/Pods-Adisyonum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37778C6EF12AC7759569C167 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Adisyonum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40C6393D30A810BAE0D17EEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Adisyonum-AdisyonumUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41820F2057B749F348BA83ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adisyonum-AdisyonumUITests/Pods-Adisyonum-AdisyonumUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adisyonum-AdisyonumUITests/Pods-Adisyonum-AdisyonumUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Adisyonum-AdisyonumUITests/Pods-Adisyonum-AdisyonumUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88854FE7FF70FD4AF2F915F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdisyonumTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D985B831244E3929001D559A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D985B83D244E3929001D559A /* GirisVC.swift in Sources */,
+				D90EEDD32450B1AC00F0E2D1 /* GarsonlarVC.swift in Sources */,
+				D985B839244E3929001D559A /* AppDelegate.swift in Sources */,
+				D93D25C724504B2F00B31E9D /* AcikMasalarVC.swift in Sources */,
+				D9420259244F645F007045A4 /* Garson.swift in Sources */,
+				D901E7A724535D420058A388 /* HucreAcikMasa.swift in Sources */,
+				D91771C52458D5F500136463 /* HucreKategori.swift in Sources */,
+				D942025B244F653E007045A4 /* Kategori.swift in Sources */,
+				D9E35D4B2459F83800AECD91 /* HucreUrun_Yonetici.swift in Sources */,
+				D95E2FF024520C38009E6F8E /* HucreUrun.swift in Sources */,
+				D942025D244F65AB007045A4 /* Urun.swift in Sources */,
+				D90EEDD72450B1D300F0E2D1 /* UrunlerVC.swift in Sources */,
+				D942025F244F9F84007045A4 /* Singleton.swift in Sources */,
+				D90964F2245317A400A010CB /* HucreGoruntulenenUrun.swift in Sources */,
+				D90866AC24503E4D00554691 /* KasaVC.swift in Sources */,
+				D981D3412450E74100B9B3F4 /* Masa.swift in Sources */,
+				D90EEDD12450B19A00F0E2D1 /* RestoranlarVC.swift in Sources */,
+				D9420261244FA4D6007045A4 /* TumMasalarVC.swift in Sources */,
+				D9B3A6EB24549C22001461B4 /* DialogView.swift in Sources */,
+				D963281424586CB2001E78CD /* GarsonEkleVC.swift in Sources */,
+				D95E2FF224520D13009E6F8E /* HucreSiparis.swift in Sources */,
+				D985B83B244E3929001D559A /* SceneDelegate.swift in Sources */,
+				D90EEDD52450B1C100F0E2D1 /* KategorilerVC.swift in Sources */,
+				D97BFFF92455A9BF00580C4C /* HucreRestoran.swift in Sources */,
+				D9E6730E2459720000DD9392 /* KategoriEkleVC.swift in Sources */,
+				D908FF2624573B73007CDCD4 /* HucreGarson.swift in Sources */,
+				D963281624586EA3001E78CD /* YeniDialogView.swift in Sources */,
+				D9D4D6A72450E2CF0069EFE0 /* HucreTumMasalar.swift in Sources */,
+				D965A432245C48F600FF0577 /* HucreMasa_KasaVC.swift in Sources */,
+				D9420257244F4F87007045A4 /* Restoran.swift in Sources */,
+				D91BD527245B08BD00BDFDC6 /* UrunEkleVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D985B847244E392C001D559A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D985B850244E392C001D559A /* AdisyonumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D985B852244E392C001D559A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D985B85B244E392C001D559A /* AdisyonumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D985B84D244E392C001D559A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D985B834244E3929001D559A /* Adisyonum */;
+			targetProxy = D985B84C244E392C001D559A /* PBXContainerItemProxy */;
+		};
+		D985B858244E392C001D559A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D985B834244E3929001D559A /* Adisyonum */;
+			targetProxy = D985B857244E392C001D559A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D985B83E244E3929001D559A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D985B83F244E3929001D559A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D985B843244E392C001D559A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D985B844244E392C001D559A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D985B85D244E392C001D559A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D985B85E244E392C001D559A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D985B860244E392C001D559A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE80C2BFB3815B6AF05EEA5 /* Pods-Adisyonum.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Adisyonum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nejatboy.Adisyonum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D985B861244E392C001D559A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C519953504F88C858F66CB6 /* Pods-Adisyonum.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Adisyonum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nejatboy.Adisyonum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D985B863244E392C001D559A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 979AC407D1661BDBF62B3E8E /* Pods-AdisyonumTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AdisyonumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nejatboy.AdisyonumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Adisyonum.app/Adisyonum";
+			};
+			name = Debug;
+		};
+		D985B864244E392C001D559A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 819A24546BBF1977E6336BA0 /* Pods-AdisyonumTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AdisyonumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nejatboy.AdisyonumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Adisyonum.app/Adisyonum";
+			};
+			name = Release;
+		};
+		D985B866244E392C001D559A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BCF9CF1DAEEAF7E150FA95C /* Pods-Adisyonum-AdisyonumUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AdisyonumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nejatboy.AdisyonumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Adisyonum;
+			};
+			name = Debug;
+		};
+		D985B867244E392C001D559A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18F420E81F26FF016ABE4B2B /* Pods-Adisyonum-AdisyonumUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AdisyonumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nejatboy.AdisyonumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Adisyonum;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D985B830244E3929001D559A /* Build configuration list for PBXProject "Adisyonum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D985B85D244E392C001D559A /* Debug */,
+				D985B85E244E392C001D559A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D985B85F244E392C001D559A /* Build configuration list for PBXNativeTarget "Adisyonum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D985B860244E392C001D559A /* Debug */,
+				D985B861244E392C001D559A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D985B862244E392C001D559A /* Build configuration list for PBXNativeTarget "AdisyonumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D985B863244E392C001D559A /* Debug */,
+				D985B864244E392C001D559A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D985B865244E392C001D559A /* Build configuration list for PBXNativeTarget "AdisyonumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D985B866244E392C001D559A /* Debug */,
+				D985B867244E392C001D559A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D985B82D244E3929001D559A /* Project object */;
+}

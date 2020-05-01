@@ -1,0 +1,6 @@
+framework module Pods_Adisyonum {
+  umbrella header "Pods-Adisyonum-umbrella.h"
+
+  export *
+  module * { export * }
+}
