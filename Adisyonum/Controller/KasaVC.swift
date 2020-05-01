@@ -1,11 +1,13 @@
 
 
 import UIKit
+import Firebase
 
 class KasaVC: UIViewController {
     
     @IBOutlet weak var collectionViewMasalar: UICollectionView!
     
+    let referenceMasalar = Firestore.firestore().collection("Masalar")
     let singleton = Singleton.getInstance
     var tumMasalar = [Masa]()
     
@@ -37,9 +39,15 @@ class KasaVC: UIViewController {
         collectionViewMasalar.dataSource = self
         hucreTasariminiAyarla()
         
-        masalariOlustur()
         
         
+    }
+    
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        masalariGetir(singleton.loginKasa!.restoranId)
     }
     
     
@@ -55,6 +63,32 @@ class KasaVC: UIViewController {
         tasarim.itemSize = CGSize(width: hucreKenarUzunluk,  height: hucreKenarUzunluk)
         tasarim.scrollDirection = UICollectionView.ScrollDirection.vertical
         collectionViewMasalar.collectionViewLayout = tasarim   //Hazırladığım tasarımı aktardım
+    }
+    
+    
+    
+    
+    func masalariGetir(_ restoranId:String) {
+        let query = referenceMasalar.whereField("restoranId", isEqualTo: restoranId)
+        query.addSnapshotListener { (querySnapshots, error) in
+            if error == nil && querySnapshots != nil {
+                self.tumMasalar.removeAll()
+                self.masalariOlustur()
+                
+                for document in querySnapshots!.documents {
+                    let masaId = document.documentID
+                    let masaNo = document.get("masaNo") as! Int
+                    let masaTutar = document.get("masaTutar") as! Double
+                    let masaAcik = document.get("masaAcik") as! Bool
+                    let masaYazdirildi = document.get("masaYazdirildi") as! Bool
+                    let garsonId = document.get("garsonId") as! String
+                    let urunler = document.get("urunler") as! [String]
+                    
+                    self.tumMasalar[masaNo - 1] = Masa(masaId, masaNo, masaTutar, masaAcik, masaYazdirildi, garsonId, restoranId, urunler)
+                }
+                self.collectionViewMasalar.reloadData()
+            }
+        }
     }
     
     
@@ -117,19 +151,22 @@ extension KasaVC: UICollectionViewDelegate, UICollectionViewDataSource {
             let masa = tumMasalar[indexPath.item]
             
             if masa.masaAcik && masa.masaYazdirildi {
-                //MAVİ
                 cell.backgroundColor = UIColor(named: "yazdirilmisMasaHucreRengi")
+                
             } else if masa.masaAcik {
-                //KIRMIZI
                 cell.backgroundColor = UIColor(named: "doluMasaHucreRengi")
+                
             } else {
-                // YEŞİL
                 cell.backgroundColor = UIColor(named: "bosMasaHucreRengi")
             }
             
             cell.labelHesap.text = "\(masa.masaTutar) TL"
-            //cell.labelGarsonAd.text = garsonGetirByGarsonId(masa.garsonId).garsonAd
             cell.labelMasaNo.text = String(masa.masaNo)
+            if masa.garsonId == "" {
+                cell.labelGarsonAd.text = ""
+            } else {
+                cell.labelGarsonAd.text = garsonGetirByGarsonId(masa.garsonId).garsonAd
+            }
             
             return cell
         }
