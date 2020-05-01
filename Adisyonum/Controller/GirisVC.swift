@@ -433,4 +433,6 @@ extension Notification.Name {
     static let kategoriyiSil = Notification.Name("kategoriyiSil")
     static let urunuDuzenle = Notification.Name("urunuDuzenle")
     static let urunuSil = Notification.Name("urunuSil")
+    static let adisyonuYazdir = Notification.Name("adisyonuYazdir")
+    static let hesabiAl = Notification.Name("hesabiAl")
 }

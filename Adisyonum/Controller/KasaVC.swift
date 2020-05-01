@@ -14,6 +14,7 @@ class KasaVC: UIViewController {
     
     
     
+    
     override var shouldAutorotate: Bool {       //Yatay mod için
         return true
     }
@@ -38,9 +39,6 @@ class KasaVC: UIViewController {
         collectionViewMasalar.delegate = self
         collectionViewMasalar.dataSource = self
         hucreTasariminiAyarla()
-        
-        
-        
     }
     
     
@@ -48,13 +46,16 @@ class KasaVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         masalariGetir(singleton.loginKasa!.restoranId)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(bildirimYakalaHesabiAl(notification:)), name: .hesabiAl, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(bildirimYakalaAdisyonuYazdir(notification:)), name: .adisyonuYazdir, object: nil)
     }
     
     
     
     
     func hucreTasariminiAyarla() {
-        let tasarim = UICollectionViewFlowLayout()  //Tasarımların çoğunu bunla yaparız
+        let tasarim = UICollectionViewFlowLayout()  
         let genislik = collectionViewMasalar.frame.size.width  //CollectionView'ın yayıldığı alanın genişliğini aldım
         tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)   //Hücre ile collectionView arası boşluklar
         tasarim.minimumInteritemSpacing = 10     //yatayda hücreler arası boşluk
@@ -115,13 +116,65 @@ class KasaVC: UIViewController {
         collectionViewMasalar.reloadData()
     }
     
+    
+    
+    
+    func masaGetirByMasaId(_ masaId:String) -> Masa {
+        var masa:Masa?
+        for m in tumMasalar {
+            if m.masaId == masaId {
+                masa = m
+                break
+            }
+        }
+        return masa!
+    }
+    
+    
+    
+    
+    func adisyonuYazdirYadaGeriAl(_ masaId:String, islem:Bool)  {
+        var veri = [String:Any]()
+        veri["masaYazdirildi"] = islem
+        referenceMasalar.document(masaId).setData(veri, merge: true)
+    }
+    
 
 
+    
+    
+    @objc func bildirimYakalaAdisyonuYazdir (notification:NSNotification) {
+        if let masaId = notification.userInfo!["masaId"] as? String {
+            if masaId == "" {       //masa boş ise
+                toastMesaj("Masa boş!")
+                
+            } else {
+                let masa = masaGetirByMasaId(masaId)
+                if masa.masaYazdirildi {
+                    adisyonuYazdirYadaGeriAl(masa.masaId, islem: false)     //Geri al
+                } else {
+                    adisyonuYazdirYadaGeriAl(masa.masaId, islem: true)      //Yazdır
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    @objc func bildirimYakalaHesabiAl (notification:NSNotification) {
+        if let masaId = notification.userInfo!["masaId"] as? String {
+            toastMesaj("Hesap alınır \(masaId)")
+        }
+    }
 }
 
 
 
-//test değişiklik
+
+
+
+
 
 
 
@@ -162,6 +215,7 @@ extension KasaVC: UICollectionViewDelegate, UICollectionViewDataSource {
             
             cell.labelHesap.text = "\(masa.masaTutar) TL"
             cell.labelMasaNo.text = String(masa.masaNo)
+            cell.labelGizliMasaId.text = masa.masaId
             if masa.garsonId == "" {
                 cell.labelGarsonAd.text = ""
             } else {
