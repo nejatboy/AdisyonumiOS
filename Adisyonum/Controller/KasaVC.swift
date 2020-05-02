@@ -172,6 +172,7 @@ class KasaVC: UIViewController {
                 if masa.masaYazdirildi {
                     let storyboard = UIStoryboard(name: "Dialog", bundle: .main)
                     let hesapAlVC = storyboard.instantiateViewController(withIdentifier: "hesapAlVC") as! HesapAlVC
+                    hesapAlVC.masa = masa
                     present(hesapAlVC, animated: true, completion: nil)
                 } else {
                     toastMesaj("Önce adisyonu yazdırınız.")

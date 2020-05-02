@@ -320,12 +320,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kalan Tutar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VL-Wf-EVD">
-                                <rect key="frame" x="20" y="182.5" width="97" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMt-hl-7Yv">
                                 <rect key="frame" x="8" y="8" width="21" height="22"/>
                                 <constraints>
@@ -344,27 +338,41 @@
                                     <action selector="buttonTutariAl:" destination="INY-2u-cbs" eventType="touchUpInside" id="JEb-sO-2hb"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4f-I1-jwB">
-                                <rect key="frame" x="20" y="226.5" width="200" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tutar Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4f-I1-jwB">
+                                <rect key="frame" x="20" y="233.5" width="200" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kalan Tutar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6e-Ti-egF">
+                                <rect key="frame" x="20" y="182.5" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VL-Wf-EVD">
+                                <rect key="frame" x="121" y="182.5" width="24" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="RbB-J3-KAM" firstAttribute="trailing" secondItem="0Jf-QM-DHy" secondAttribute="trailing" constant="10" id="2Nf-BF-tbA"/>
                             <constraint firstItem="0Jf-QM-DHy" firstAttribute="centerY" secondItem="mf8-qV-ki1" secondAttribute="centerY" multiplier="0.6" id="7w5-Tb-nqm"/>
+                            <constraint firstItem="8VL-Wf-EVD" firstAttribute="top" secondItem="q6e-Ti-egF" secondAttribute="top" id="C4e-Kx-Xvi"/>
                             <constraint firstItem="RbB-J3-KAM" firstAttribute="bottom" secondItem="pRF-kG-D3d" secondAttribute="bottom" constant="20" id="G84-1q-BBm"/>
+                            <constraint firstItem="8VL-Wf-EVD" firstAttribute="leading" secondItem="q6e-Ti-egF" secondAttribute="trailing" constant="10" id="OPt-vb-JY6"/>
                             <constraint firstItem="H4f-I1-jwB" firstAttribute="width" secondItem="RbB-J3-KAM" secondAttribute="width" multiplier="0.3" id="ObM-cA-dal"/>
                             <constraint firstItem="RbB-J3-KAM" firstAttribute="trailing" secondItem="pRF-kG-D3d" secondAttribute="trailing" constant="20" id="R1l-N3-k6E"/>
                             <constraint firstItem="9Zr-y1-ksd" firstAttribute="centerX" secondItem="mf8-qV-ki1" secondAttribute="centerX" id="Tfy-7k-e5m"/>
-                            <constraint firstItem="H4f-I1-jwB" firstAttribute="top" secondItem="8VL-Wf-EVD" secondAttribute="bottom" constant="20" id="Z9L-bN-SpK"/>
-                            <constraint firstItem="8VL-Wf-EVD" firstAttribute="top" secondItem="0Jf-QM-DHy" secondAttribute="bottom" constant="50" id="cYS-DW-Bue"/>
+                            <constraint firstItem="q6e-Ti-egF" firstAttribute="top" secondItem="0Jf-QM-DHy" secondAttribute="bottom" constant="50" id="akn-gq-aRs"/>
+                            <constraint firstItem="q6e-Ti-egF" firstAttribute="leading" secondItem="RbB-J3-KAM" secondAttribute="leading" constant="20" id="e7c-wP-vWF"/>
                             <constraint firstItem="H4f-I1-jwB" firstAttribute="leading" secondItem="RbB-J3-KAM" secondAttribute="leading" constant="20" id="fyK-u7-AEN"/>
                             <constraint firstItem="9Zr-y1-ksd" firstAttribute="top" secondItem="RbB-J3-KAM" secondAttribute="top" constant="10" id="grW-9h-uid"/>
-                            <constraint firstItem="8VL-Wf-EVD" firstAttribute="leading" secondItem="RbB-J3-KAM" secondAttribute="leading" constant="20" id="jcm-bK-5kz"/>
                             <constraint firstItem="TMt-hl-7Yv" firstAttribute="top" secondItem="RbB-J3-KAM" secondAttribute="top" constant="8" id="jdf-6Z-C9s"/>
                             <constraint firstItem="0Jf-QM-DHy" firstAttribute="leading" secondItem="RbB-J3-KAM" secondAttribute="leading" constant="10" id="jtu-V4-44m"/>
+                            <constraint firstItem="H4f-I1-jwB" firstAttribute="top" secondItem="8VL-Wf-EVD" secondAttribute="bottom" constant="30" id="prP-ZB-GQi"/>
                             <constraint firstItem="TMt-hl-7Yv" firstAttribute="leading" secondItem="RbB-J3-KAM" secondAttribute="leading" constant="8" id="wxC-bi-I0c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RbB-J3-KAM"/>
