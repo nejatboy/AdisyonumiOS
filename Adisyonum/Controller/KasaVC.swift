@@ -164,7 +164,20 @@ class KasaVC: UIViewController {
     
     @objc func bildirimYakalaHesabiAl (notification:NSNotification) {
         if let masaId = notification.userInfo!["masaId"] as? String {
-            toastMesaj("Hesap alınır \(masaId)")
+            if masaId == "" {   //Masa boş ise
+                toastMesaj("Masa boş!")
+                
+            } else {
+                let masa = masaGetirByMasaId(masaId)
+                if masa.masaYazdirildi {
+                    let storyboard = UIStoryboard(name: "Dialog", bundle: .main)
+                    let hesapAlVC = storyboard.instantiateViewController(withIdentifier: "hesapAlVC") as! HesapAlVC
+                    present(hesapAlVC, animated: true, completion: nil)
+                } else {
+                    toastMesaj("Önce adisyonu yazdırınız.")
+                }
+            }
+            
         }
     }
 }

@@ -46,6 +46,7 @@
 		D985B85B244E392C001D559A /* AdisyonumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B85A244E392C001D559A /* AdisyonumUITests.swift */; };
 		D9B3A6EB24549C22001461B4 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B3A6EA24549C22001461B4 /* DialogView.swift */; };
 		D9D4D6A72450E2CF0069EFE0 /* HucreTumMasalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4D6A62450E2CF0069EFE0 /* HucreTumMasalar.swift */; };
+		D9D78563245D76F400C5D6A2 /* HesapAlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D78562245D76F400C5D6A2 /* HesapAlVC.swift */; };
 		D9E35D4B2459F83800AECD91 /* HucreUrun_Yonetici.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E35D4A2459F83800AECD91 /* HucreUrun_Yonetici.swift */; };
 		D9E6730E2459720000DD9392 /* KategoriEkleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E6730D2459720000DD9392 /* KategoriEkleVC.swift */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		D985B85C244E392C001D559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B3A6EA24549C22001461B4 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		D9D4D6A62450E2CF0069EFE0 /* HucreTumMasalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreTumMasalar.swift; sourceTree = "<group>"; };
+		D9D78562245D76F400C5D6A2 /* HesapAlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesapAlVC.swift; sourceTree = "<group>"; };
 		D9E35D4A2459F83800AECD91 /* HucreUrun_Yonetici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreUrun_Yonetici.swift; sourceTree = "<group>"; };
 		D9E6730D2459720000DD9392 /* KategoriEkleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriEkleVC.swift; sourceTree = "<group>"; };
 		DAE80C2BFB3815B6AF05EEA5 /* Pods-Adisyonum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adisyonum.debug.xcconfig"; path = "Target Support Files/Pods-Adisyonum/Pods-Adisyonum.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */,
+				D9D78562245D76F400C5D6A2 /* HesapAlVC.swift */,
 			);
 			path = Kasa;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D985B83D244E3929001D559A /* GirisVC.swift in Sources */,
+				D9D78563245D76F400C5D6A2 /* HesapAlVC.swift in Sources */,
 				D90EEDD32450B1AC00F0E2D1 /* GarsonlarVC.swift in Sources */,
 				D985B839244E3929001D559A /* AppDelegate.swift in Sources */,
 				D93D25C724504B2F00B31E9D /* AcikMasalarVC.swift in Sources */,
