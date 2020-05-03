@@ -34,6 +34,7 @@
 		D963281424586CB2001E78CD /* GarsonEkleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963281324586CB2001E78CD /* GarsonEkleVC.swift */; };
 		D963281624586EA3001E78CD /* YeniDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963281524586EA3001E78CD /* YeniDialogView.swift */; };
 		D965A432245C48F600FF0577 /* HucreMasa_KasaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */; };
+		D97501F7245F2D1000D5CA61 /* AnlikRaporalarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97501F6245F2D1000D5CA61 /* AnlikRaporalarVC.swift */; };
 		D97BFFF92455A9BF00580C4C /* HucreRestoran.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */; };
 		D981B0BD245EF6B2004067E0 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981B0BC245EF6B2004067E0 /* SideMenuVC.swift */; };
 		D981B0BF245F01BD004067E0 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981B0BE245F01BD004067E0 /* SideMenuView.swift */; };
@@ -104,6 +105,7 @@
 		D963281324586CB2001E78CD /* GarsonEkleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarsonEkleVC.swift; sourceTree = "<group>"; };
 		D963281524586EA3001E78CD /* YeniDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeniDialogView.swift; sourceTree = "<group>"; };
 		D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreMasa_KasaVC.swift; sourceTree = "<group>"; };
+		D97501F6245F2D1000D5CA61 /* AnlikRaporalarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnlikRaporalarVC.swift; sourceTree = "<group>"; };
 		D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreRestoran.swift; sourceTree = "<group>"; };
 		D981B0BC245EF6B2004067E0 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		D981B0BE245F01BD004067E0 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,15 @@
 			path = Kasa;
 			sourceTree = "<group>";
 		};
+		D97501F5245F2CB400D5CA61 /* KasaVC */ = {
+			isa = PBXGroup;
+			children = (
+				D90866AB24503E4C00554691 /* KasaVC.swift */,
+				D97501F6245F2D1000D5CA61 /* AnlikRaporalarVC.swift */,
+			);
+			path = KasaVC;
+			sourceTree = "<group>";
+		};
 		D97BFFF72455A92600580C4C /* Yonetici */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,10 +342,10 @@
 		D985B86B244E396B001D559A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D97501F5245F2CB400D5CA61 /* KasaVC */,
 				D90EEDCF2450B18000F0E2D1 /* YoneticiVC */,
 				D90866AD2450483200554691 /* GarsonVC */,
 				D985B83C244E3929001D559A /* GirisVC.swift */,
-				D90866AB24503E4C00554691 /* KasaVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -605,6 +616,7 @@
 				D95E2FF024520C38009E6F8E /* HucreUrun.swift in Sources */,
 				D942025D244F65AB007045A4 /* Urun.swift in Sources */,
 				D90EEDD72450B1D300F0E2D1 /* UrunlerVC.swift in Sources */,
+				D97501F7245F2D1000D5CA61 /* AnlikRaporalarVC.swift in Sources */,
 				D942025F244F9F84007045A4 /* Singleton.swift in Sources */,
 				D981B0BD245EF6B2004067E0 /* SideMenuVC.swift in Sources */,
 				D90964F2245317A400A010CB /* HucreGoruntulenenUrun.swift in Sources */,

@@ -76,7 +76,7 @@ class HesapAlVC: UIViewController {
         let query = referenceAnlikRaporlar.whereField("restoranId", isEqualTo: singleton.loginKasa!.restoranId)
         query.getDocuments { (querySnapshots, error) in
             if error == nil && querySnapshots != nil {
-                if !querySnapshots!.isEmpty {        //Rapor yok
+                if !querySnapshots!.isEmpty {
                     if let document = querySnapshots?.documents[0] {
                         let raporId = document.documentID
                         let ciro = document.get("ciro") as! Double

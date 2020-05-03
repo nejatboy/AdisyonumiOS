@@ -10,11 +10,11 @@ class KasaVC: UIViewController {
     @IBOutlet weak var viewSideMenuLeftConstraint: NSLayoutConstraint!
     
     let referenceMasalar = Firestore.firestore().collection("Masalar")
+    let referenceAnlikRaporlar = Firestore.firestore().collection("AnlikRaporlar")
     let singleton = Singleton.getInstance
     var tumMasalar = [Masa]()
     
     var sideMenuAcik = false
-    
     
     
     
@@ -44,6 +44,7 @@ class KasaVC: UIViewController {
         collectionViewMasalar.dataSource = self
         hucreTasariminiAyarla()
         
+        UIApplication.shared.isIdleTimerDisabled = true      //Keep screen on
     }
     
     
@@ -56,6 +57,17 @@ class KasaVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(bildirimYakalaAdisyonuYazdir(notification:)), name: .adisyonuYazdir, object: nil)
         
         sideMenuAc()
+    }
+    
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "kasaVCtoAnlikRaporlarVC" {
+            let rapor = sender as! AnlikRapor
+            let anlikRaporVC = segue.destination as! AnlikRaporalarVC
+            anlikRaporVC.rapor = rapor
+        }
     }
     
     
@@ -212,21 +224,56 @@ class KasaVC: UIViewController {
     }
     
     
+    
+    
     @IBAction func buttonBugunkuRaporlar(_ sender: Any) {
+        referenceAnlikRaporlar.whereField("restoranId", isEqualTo: singleton.loginKasa!.restoranId).getDocuments { (querySnapshots, error) in
+            if error == nil && querySnapshots != nil {
+                if querySnapshots!.isEmpty {
+                    self.toastMesaj("Henüz hesap alınmadı.")
+                    self.sideMenuKapat()
+                    
+                } else {
+                    var rapor:AnlikRapor?
+                    if let document = querySnapshots?.documents[0] {
+                        let raporId = document.documentID
+                        let ciro = document.get("ciro") as! Double
+                        let hesaplar = document.get("hesaplar") as! [String:Double]
+                        let garsonSatislari = document.get("garsonSatislari") as! [String:Double]
+                        let restoranId = document.get("restoranId") as! String
+                        
+                        rapor = AnlikRapor(raporId, restoranId, ciro, garsonSatislari, hesaplar)
+                    }
+                    self.performSegue(withIdentifier: "kasaVCtoAnlikRaporlarVC", sender: rapor!)
+                    self.sideMenuKapat()
+                }
+            }
+        }
     }
+    
     
     
     
     @IBAction func buttonTumRaporlar(_ sender: Any) {
+        toastMesaj("Tüm raporlar")
     }
+    
+    
     
     
     @IBAction func buttonKasayiKapat(_ sender: Any) {
+        toastMesaj("Kasa kapat")
     }
+    
+    
     
     
     @IBAction func buttonCikisYap(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
+    
+    
+    
     
     @IBAction func slideHareketi(_ sender: UIPanGestureRecognizer) {
         
@@ -234,12 +281,10 @@ class KasaVC: UIViewController {
             let transition = sender.translation(in: self.view).x
             if transition > 50 && !sideMenuAcik{
                 sideMenuAc()
+                
             } else if transition < -50 && sideMenuAcik{
                 sideMenuKapat()
             }
-            print(transition)
-        } else if sender.state == .ended {
-            
         }
     }
 }
