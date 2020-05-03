@@ -35,6 +35,8 @@
 		D963281624586EA3001E78CD /* YeniDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963281524586EA3001E78CD /* YeniDialogView.swift */; };
 		D965A432245C48F600FF0577 /* HucreMasa_KasaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */; };
 		D97BFFF92455A9BF00580C4C /* HucreRestoran.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */; };
+		D981B0BD245EF6B2004067E0 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981B0BC245EF6B2004067E0 /* SideMenuVC.swift */; };
+		D981B0BF245F01BD004067E0 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981B0BE245F01BD004067E0 /* SideMenuView.swift */; };
 		D981D3412450E74100B9B3F4 /* Masa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981D3402450E74100B9B3F4 /* Masa.swift */; };
 		D985B839244E3929001D559A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B838244E3929001D559A /* AppDelegate.swift */; };
 		D985B83B244E3929001D559A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B83A244E3929001D559A /* SceneDelegate.swift */; };
@@ -103,6 +105,8 @@
 		D963281524586EA3001E78CD /* YeniDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeniDialogView.swift; sourceTree = "<group>"; };
 		D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreMasa_KasaVC.swift; sourceTree = "<group>"; };
 		D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreRestoran.swift; sourceTree = "<group>"; };
+		D981B0BC245EF6B2004067E0 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		D981B0BE245F01BD004067E0 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		D981D3402450E74100B9B3F4 /* Masa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masa.swift; sourceTree = "<group>"; };
 		D985B835244E3929001D559A /* Adisyonum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adisyonum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D985B838244E3929001D559A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 			children = (
 				D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */,
 				D9D78562245D76F400C5D6A2 /* HesapAlVC.swift */,
+				D981B0BC245EF6B2004067E0 /* SideMenuVC.swift */,
 			);
 			path = Kasa;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				D9D4D6A82450E2D70069EFE0 /* Garson */,
 				D9B3A6EA24549C22001461B4 /* DialogView.swift */,
 				D963281524586EA3001E78CD /* YeniDialogView.swift */,
+				D981B0BE245F01BD004067E0 /* SideMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,6 +606,7 @@
 				D942025D244F65AB007045A4 /* Urun.swift in Sources */,
 				D90EEDD72450B1D300F0E2D1 /* UrunlerVC.swift in Sources */,
 				D942025F244F9F84007045A4 /* Singleton.swift in Sources */,
+				D981B0BD245EF6B2004067E0 /* SideMenuVC.swift in Sources */,
 				D90964F2245317A400A010CB /* HucreGoruntulenenUrun.swift in Sources */,
 				D90866AC24503E4D00554691 /* KasaVC.swift in Sources */,
 				D981D3412450E74100B9B3F4 /* Masa.swift in Sources */,
@@ -607,6 +614,7 @@
 				D9420261244FA4D6007045A4 /* TumMasalarVC.swift in Sources */,
 				D9B3A6EB24549C22001461B4 /* DialogView.swift in Sources */,
 				D963281424586CB2001E78CD /* GarsonEkleVC.swift in Sources */,
+				D981B0BF245F01BD004067E0 /* SideMenuView.swift in Sources */,
 				D95E2FF224520D13009E6F8E /* HucreSiparis.swift in Sources */,
 				D985B83B244E3929001D559A /* SceneDelegate.swift in Sources */,
 				D90EEDD52450B1C100F0E2D1 /* KategorilerVC.swift in Sources */,

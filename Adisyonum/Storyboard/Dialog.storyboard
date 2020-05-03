@@ -388,6 +388,38 @@
             </objects>
             <point key="canvasLocation" x="3332.3838080959522" y="69.599999999999994"/>
         </scene>
+        <!--Side MenuVC-->
+        <scene sceneID="HWO-ZI-U21">
+            <objects>
+                <viewController storyboardIdentifier="sideMenuVC" id="6JR-1G-Iw1" customClass="SideMenuVC" customModule="Adisyonum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GEG-qU-o3P">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAq-po-IVI">
+                                <rect key="frame" x="-10" y="0.0" width="200" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sAq-po-IVI" firstAttribute="top" secondItem="34w-nq-JIb" secondAttribute="top" id="8IZ-bf-yMM"/>
+                            <constraint firstItem="sAq-po-IVI" firstAttribute="leading" secondItem="GEG-qU-o3P" secondAttribute="leading" constant="-10" id="IAB-II-ern"/>
+                            <constraint firstItem="34w-nq-JIb" firstAttribute="bottom" secondItem="sAq-po-IVI" secondAttribute="bottom" id="XKe-cN-KSy"/>
+                            <constraint firstItem="sAq-po-IVI" firstAttribute="width" secondItem="34w-nq-JIb" secondAttribute="width" multiplier="0.3" id="uGE-bp-MD1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="34w-nq-JIb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXO-vk-03l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4207" y="70"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>

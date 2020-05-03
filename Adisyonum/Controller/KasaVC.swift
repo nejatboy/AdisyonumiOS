@@ -6,10 +6,14 @@ import Firebase
 class KasaVC: UIViewController {
     
     @IBOutlet weak var collectionViewMasalar: UICollectionView!
+    @IBOutlet weak var viewSideMenu: UIView!
+    @IBOutlet weak var viewSideMenuLeftConstraint: NSLayoutConstraint!
     
     let referenceMasalar = Firestore.firestore().collection("Masalar")
     let singleton = Singleton.getInstance
     var tumMasalar = [Masa]()
+    
+    var sideMenuAcik = false
     
     
     
@@ -39,16 +43,19 @@ class KasaVC: UIViewController {
         collectionViewMasalar.delegate = self
         collectionViewMasalar.dataSource = self
         hucreTasariminiAyarla()
+        
     }
     
     
     
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         masalariGetir(singleton.loginKasa!.restoranId)
         
         NotificationCenter.default.addObserver(self, selector: #selector(bildirimYakalaHesabiAl(notification:)), name: .hesabiAl, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(bildirimYakalaAdisyonuYazdir(notification:)), name: .adisyonuYazdir, object: nil)
+        
+        sideMenuAc()
     }
     
     
@@ -139,6 +146,28 @@ class KasaVC: UIViewController {
         referenceMasalar.document(masaId).setData(veri, merge: true)
     }
     
+    
+    
+    
+    func sideMenuAc() {
+        viewSideMenuLeftConstraint.constant = -10
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        sideMenuAcik = true
+    }
+    
+    
+    
+    
+    func sideMenuKapat() {
+        viewSideMenuLeftConstraint.constant = -185
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        sideMenuAcik = false
+    }
+    
 
 
     
@@ -178,6 +207,38 @@ class KasaVC: UIViewController {
                     toastMesaj("Önce adisyonu yazdırınız.")
                 }
             }
+            
+        }
+    }
+    
+    
+    @IBAction func buttonBugunkuRaporlar(_ sender: Any) {
+    }
+    
+    
+    
+    @IBAction func buttonTumRaporlar(_ sender: Any) {
+    }
+    
+    
+    @IBAction func buttonKasayiKapat(_ sender: Any) {
+    }
+    
+    
+    @IBAction func buttonCikisYap(_ sender: Any) {
+    }
+    
+    @IBAction func slideHareketi(_ sender: UIPanGestureRecognizer) {
+        
+        if sender.state == .changed {
+            let transition = sender.translation(in: self.view).x
+            if transition > 50 && !sideMenuAcik{
+                sideMenuAc()
+            } else if transition < -50 && sideMenuAcik{
+                sideMenuKapat()
+            }
+            print(transition)
+        } else if sender.state == .ended {
             
         }
     }

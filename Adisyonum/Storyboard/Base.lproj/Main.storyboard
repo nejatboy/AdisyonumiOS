@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FbV-8P-Fpf">
-                                <rect key="frame" x="20" y="0.0" width="647" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hOj-Ng-RSt">
                                     <size key="itemSize" width="120" height="120"/>
@@ -256,21 +256,88 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzl-U8-m5I" customClass="SideMenuView" customModule="Adisyonum" customModuleProvider="target">
+                                <rect key="frame" x="-180" y="0.0" width="175" height="375"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9c-Tp-6lh">
+                                        <rect key="frame" x="30" y="50" width="122" height="30"/>
+                                        <state key="normal" title="Bugünkü Raprolar">
+                                            <color key="titleColor" name="colorPrimaryDark"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonBugunkuRaporlar:" destination="JEC-24-OBX" eventType="touchUpInside" id="2k1-zA-l43"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBj-hT-Grh">
+                                        <rect key="frame" x="30" y="100" width="92" height="30"/>
+                                        <state key="normal" title="Tüm Raporlar">
+                                            <color key="titleColor" name="colorPrimaryDark"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTumRaporlar:" destination="JEC-24-OBX" eventType="touchUpInside" id="bcI-zP-oCW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSs-6c-npq">
+                                        <rect key="frame" x="30" y="150" width="88" height="30"/>
+                                        <state key="normal" title="Kasayı Kapat">
+                                            <color key="titleColor" name="colorPrimaryDark"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonKasayiKapat:" destination="JEC-24-OBX" eventType="touchUpInside" id="tK0-I4-sih"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-G4-a8J">
+                                        <rect key="frame" x="30" y="200" width="63" height="30"/>
+                                        <state key="normal" title="Çıkış Yap">
+                                            <color key="titleColor" name="colorPrimaryDark"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonCikisYap:" destination="JEC-24-OBX" eventType="touchUpInside" id="bDp-t1-6d1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="KSe-RG-g8L"/>
+                                    <constraint firstItem="XBj-hT-Grh" firstAttribute="leading" secondItem="wzl-U8-m5I" secondAttribute="leading" constant="30" id="RUT-Qq-U7x"/>
+                                    <constraint firstItem="SSs-6c-npq" firstAttribute="top" secondItem="XBj-hT-Grh" secondAttribute="bottom" constant="20" id="Y3Z-Km-w6O"/>
+                                    <constraint firstItem="a9c-Tp-6lh" firstAttribute="leading" secondItem="wzl-U8-m5I" secondAttribute="leading" constant="30" id="aJV-z8-l91"/>
+                                    <constraint firstItem="yqe-G4-a8J" firstAttribute="leading" secondItem="wzl-U8-m5I" secondAttribute="leading" constant="30" id="bjT-Yf-Mew"/>
+                                    <constraint firstItem="XBj-hT-Grh" firstAttribute="top" secondItem="a9c-Tp-6lh" secondAttribute="bottom" constant="20" id="ikL-0b-0Km"/>
+                                    <constraint firstItem="a9c-Tp-6lh" firstAttribute="top" secondItem="wzl-U8-m5I" secondAttribute="top" constant="50" id="l0X-Y8-FUc"/>
+                                    <constraint firstItem="yqe-G4-a8J" firstAttribute="top" secondItem="SSs-6c-npq" secondAttribute="bottom" constant="20" id="nD5-d3-jM2"/>
+                                    <constraint firstItem="SSs-6c-npq" firstAttribute="leading" secondItem="wzl-U8-m5I" secondAttribute="leading" constant="30" id="rEQ-5F-1yn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="wzl-U8-m5I" firstAttribute="top" secondItem="sjo-9u-zav" secondAttribute="top" id="9u2-CS-vQK"/>
+                            <constraint firstAttribute="bottom" secondItem="wzl-U8-m5I" secondAttribute="bottom" id="GJd-Ik-RU5"/>
                             <constraint firstItem="ddT-Ca-qqo" firstAttribute="trailing" secondItem="FbV-8P-Fpf" secondAttribute="trailing" id="IzL-Bd-UMW"/>
-                            <constraint firstItem="FbV-8P-Fpf" firstAttribute="leading" secondItem="ddT-Ca-qqo" secondAttribute="leading" constant="20" id="LZu-fK-mxe"/>
+                            <constraint firstItem="FbV-8P-Fpf" firstAttribute="leading" secondItem="ddT-Ca-qqo" secondAttribute="leading" id="LZu-fK-mxe"/>
+                            <constraint firstItem="wzl-U8-m5I" firstAttribute="leading" secondItem="ddT-Ca-qqo" secondAttribute="leading" constant="-180" id="Oge-HF-YbB"/>
                             <constraint firstItem="FbV-8P-Fpf" firstAttribute="top" secondItem="ddT-Ca-qqo" secondAttribute="top" id="hic-XZ-0dc"/>
                             <constraint firstItem="ddT-Ca-qqo" firstAttribute="bottom" secondItem="FbV-8P-Fpf" secondAttribute="bottom" id="sdj-mD-gxu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ddT-Ca-qqo"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZnA-H5-JCT" appends="YES" id="IsX-GI-WfH"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="collectionViewMasalar" destination="FbV-8P-Fpf" id="qAh-w4-Ahm"/>
+                        <outlet property="viewSideMenu" destination="wzl-U8-m5I" id="rPJ-0n-cRq"/>
+                        <outlet property="viewSideMenuLeftConstraint" destination="Oge-HF-YbB" id="wcQ-sY-opw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="285-83-wWE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ZnA-H5-JCT">
+                    <connections>
+                        <action selector="slideHareketi:" destination="JEC-24-OBX" id="MZq-8B-lku"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.28185907046478" y="970.39999999999998"/>
         </scene>
@@ -336,7 +403,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbU-oI-aYA">
-                                                    <rect key="frame" x="609" y="-2" width="48" height="48"/>
+                                                    <rect key="frame" x="633" y="10" width="24" height="24"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="lrl-VJ-pIv" eventType="touchUpInside" id="IId-Jb-3KK"/>
@@ -410,7 +477,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-v8-gIT">
-                                        <rect key="frame" x="603" y="-7" width="48" height="48"/>
+                                        <rect key="frame" x="627" y="5" width="24" height="24"/>
                                         <state key="normal" image="menu"/>
                                         <connections>
                                             <action selector="buttonToolbarMenuAc:" destination="Miu-qM-1os" eventType="touchUpInside" id="xZz-eR-3Fc"/>
@@ -453,7 +520,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zr-aj-Cso" userLabel="MenuAc">
-                                                    <rect key="frame" x="609" y="-2" width="48" height="48"/>
+                                                    <rect key="frame" x="633" y="10" width="24" height="24"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="QK3-6Z-YmP" eventType="touchUpInside" id="PE9-tP-FUC"/>
@@ -651,7 +718,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-SM-5uH">
-                                                    <rect key="frame" x="609" y="-2" width="48" height="48"/>
+                                                    <rect key="frame" x="633" y="10" width="24" height="24"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="6fZ-ln-Kyb" eventType="touchUpInside" id="NYH-B2-huN"/>
@@ -770,14 +837,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRo-kg-0hH">
-                                                    <rect key="frame" x="609" y="-2" width="48" height="48"/>
+                                                    <rect key="frame" x="633" y="10" width="24" height="24"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="hz1-fP-w32" eventType="touchUpInside" id="mXf-nl-YYK"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürün Fiyat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdT-ZM-X8C">
-                                                    <rect key="frame" x="518.5" y="13" width="70.5" height="18"/>
+                                                    <rect key="frame" x="542.5" y="13" width="70.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -892,7 +959,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJu-hw-1E1">
-                                        <rect key="frame" x="609" y="-7" width="48" height="48"/>
+                                        <rect key="frame" x="633" y="5" width="24" height="24"/>
                                         <state key="normal" image="menu"/>
                                         <connections>
                                             <action selector="buttonDropDownMenu:" destination="HAM-k6-rHQ" eventType="touchUpInside" id="ASu-Nw-Mt9"/>
@@ -1328,7 +1395,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-ch-KWU">
-                                                    <rect key="frame" x="619" y="-2" width="48" height="48"/>
+                                                    <rect key="frame" x="643" y="10" width="24" height="24"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="NHU-ef-cJc" eventType="touchUpInside" id="FiW-BR-ddD"/>
