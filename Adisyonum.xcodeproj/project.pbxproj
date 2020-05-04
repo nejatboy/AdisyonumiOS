@@ -20,6 +20,8 @@
 		D90EEDD72450B1D300F0E2D1 /* UrunlerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90EEDD62450B1D300F0E2D1 /* UrunlerVC.swift */; };
 		D91771C52458D5F500136463 /* HucreKategori.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91771C42458D5F400136463 /* HucreKategori.swift */; };
 		D91BD527245B08BD00BDFDC6 /* UrunEkleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91BD526245B08BD00BDFDC6 /* UrunEkleVC.swift */; };
+		D92DE9432460712500C27355 /* TumRaporlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92DE9422460712500C27355 /* TumRaporlarVC.swift */; };
+		D92DE945246071AF00C27355 /* RaporGoruntuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92DE944246071AF00C27355 /* RaporGoruntuleVC.swift */; };
 		D93D25C724504B2F00B31E9D /* AcikMasalarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93D25C624504B2F00B31E9D /* AcikMasalarVC.swift */; };
 		D9420255244F314D007045A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9420254244F314D007045A4 /* GoogleService-Info.plist */; };
 		D9420257244F4F87007045A4 /* Restoran.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9420256244F4F87007045A4 /* Restoran.swift */; };
@@ -92,6 +94,8 @@
 		D90EEDD62450B1D300F0E2D1 /* UrunlerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerVC.swift; sourceTree = "<group>"; };
 		D91771C42458D5F400136463 /* HucreKategori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreKategori.swift; sourceTree = "<group>"; };
 		D91BD526245B08BD00BDFDC6 /* UrunEkleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunEkleVC.swift; sourceTree = "<group>"; };
+		D92DE9422460712500C27355 /* TumRaporlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumRaporlarVC.swift; sourceTree = "<group>"; };
+		D92DE944246071AF00C27355 /* RaporGoruntuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RaporGoruntuleVC.swift; path = "/Users/nejatboy/Desktop/iOS Complete/Adisyonum/Adisyonum/Controller/KasaVC/RaporGoruntuleVC.swift"; sourceTree = "<absolute>"; };
 		D93D25C624504B2F00B31E9D /* AcikMasalarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcikMasalarVC.swift; sourceTree = "<group>"; };
 		D9420254244F314D007045A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D9420256244F4F87007045A4 /* Restoran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restoran.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 			children = (
 				D90866AB24503E4C00554691 /* KasaVC.swift */,
 				D97501F6245F2D1000D5CA61 /* AnlikRaporalarVC.swift */,
+				D92DE9422460712500C27355 /* TumRaporlarVC.swift */,
+				D92DE944246071AF00C27355 /* RaporGoruntuleVC.swift */,
 			);
 			path = KasaVC;
 			sourceTree = "<group>";
@@ -620,6 +626,7 @@
 				D942025D244F65AB007045A4 /* Urun.swift in Sources */,
 				D90EEDD72450B1D300F0E2D1 /* UrunlerVC.swift in Sources */,
 				D97501F7245F2D1000D5CA61 /* AnlikRaporalarVC.swift in Sources */,
+				D92DE945246071AF00C27355 /* RaporGoruntuleVC.swift in Sources */,
 				D942025F244F9F84007045A4 /* Singleton.swift in Sources */,
 				D981B0BD245EF6B2004067E0 /* SideMenuVC.swift in Sources */,
 				D90964F2245317A400A010CB /* HucreGoruntulenenUrun.swift in Sources */,
@@ -628,6 +635,7 @@
 				D90EEDD12450B19A00F0E2D1 /* RestoranlarVC.swift in Sources */,
 				D9420261244FA4D6007045A4 /* TumMasalarVC.swift in Sources */,
 				D9B3A6EB24549C22001461B4 /* DialogView.swift in Sources */,
+				D92DE9432460712500C27355 /* TumRaporlarVC.swift in Sources */,
 				D963281424586CB2001E78CD /* GarsonEkleVC.swift in Sources */,
 				D981B0BF245F01BD004067E0 /* SideMenuView.swift in Sources */,
 				D95E2FF224520D13009E6F8E /* HucreSiparis.swift in Sources */,

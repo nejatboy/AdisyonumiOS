@@ -284,7 +284,7 @@ class KasaVC: UIViewController {
     
     
     @IBAction func buttonTumRaporlar(_ sender: Any) {
-        toastMesaj("Tüm raporlar")
+        performSegue(withIdentifier: "kasaVCtoTumRaporlarVC", sender: nil)
     }
     
     
