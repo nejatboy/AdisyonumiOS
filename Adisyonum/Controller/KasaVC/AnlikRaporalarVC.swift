@@ -45,7 +45,6 @@ class AnlikRaporalarVC: UIViewController {
             viewRightOlusturr()
             garsonSatislariniGoster(rapor)
         }
-        
     }
     
     

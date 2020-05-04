@@ -11,6 +11,7 @@ class KasaVC: UIViewController {
     
     let referenceMasalar = Firestore.firestore().collection("Masalar")
     let referenceAnlikRaporlar = Firestore.firestore().collection("AnlikRaporlar")
+    let referenceGunlukRaporlar = Firestore.firestore().collection("GunlukRaporlar")
     let singleton = Singleton.getInstance
     var tumMasalar = [Masa]()
     
@@ -180,6 +181,34 @@ class KasaVC: UIViewController {
         sideMenuAcik = false
     }
     
+    
+    
+    
+    func anlikRaporuKapat(_ anlikRapor:AnlikRapor) {
+        let alert = UIAlertController(title: "Kasa Kapatılacak", message: "Bugünkü alınan hesaplar raporlanacak. Emin misiniz?", preferredStyle: .alert)
+        let evetButton = UIAlertAction(title: "Evet", style: .destructive) { (alertAction) in
+            var veri = [String:Any]()
+            veri["raporId"] = ""
+            veri["hesaplar"] = anlikRapor.hesaplar
+            veri["garsonSatislari"] = anlikRapor.garsonSatislari
+            veri["tarih"] = Date()
+            veri["ciro"] = anlikRapor.ciro
+            veri["restoranId"] = anlikRapor.restoranId
+            
+            self.referenceGunlukRaporlar.addDocument(data: veri) { (error) in   //Günlük raporu oluştur
+                if error == nil {
+                    self.referenceAnlikRaporlar.document(anlikRapor.raporId).delete()   //Anlık raporu sil
+                    self.toastMesaj("Rapor oluşturuldu.")
+                    self.sideMenuKapat()
+                }
+            }
+        }
+        let iptalButton = UIAlertAction(title: "İptal", style: .cancel, handler: nil)
+        alert.addAction(evetButton)
+        alert.addAction(iptalButton)
+        present(alert, animated: true, completion: nil)
+    }
+    
 
 
     
@@ -262,7 +291,39 @@ class KasaVC: UIViewController {
     
     
     @IBAction func buttonKasayiKapat(_ sender: Any) {
-        toastMesaj("Kasa kapat")
+        var acikMasaVar = false
+        for masa in tumMasalar {
+            if masa.masaAcik {
+                acikMasaVar = true
+                break
+            }
+        }
+        
+        if acikMasaVar {
+            toastMesaj("Açık masa var")
+            sideMenuKapat()
+        } else {
+            referenceAnlikRaporlar.whereField("restoranId", isEqualTo: singleton.loginKasa!.restoranId).getDocuments { (querySnapshots, error) in
+                if error == nil && querySnapshots != nil {
+                    if !querySnapshots!.isEmpty {    //Rapor varsa
+                        if let document = querySnapshots?.documents[0] {
+                            let raporId = document.documentID
+                            let ciro = document.get("ciro") as! Double
+                            let hesaplar = document.get("hesaplar") as! [String:Double]
+                            let garsonSatislari = document.get("garsonSatislari") as! [String:Double]
+                            let restoranId = document.get("restoranId") as! String
+                            
+                            let anlikRapor = AnlikRapor(raporId, restoranId, ciro, garsonSatislari, hesaplar)
+                            self.anlikRaporuKapat(anlikRapor)
+                        }
+                        
+                    } else {        //Rapor yoksa
+                        self.toastMesaj("Alınmış hesap yok.")
+                        self.sideMenuKapat()
+                    }
+                }
+            }
+        }
     }
     
     

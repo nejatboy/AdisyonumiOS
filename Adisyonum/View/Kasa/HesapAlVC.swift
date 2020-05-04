@@ -107,7 +107,6 @@ class HesapAlVC: UIViewController {
     
     
     func raporOlustur() {
-        print("rapor oluştur çalıştı")
         var veri = [String:Any]()
         veri["ciro"] = alinanTutar
         veri["hesaplar"] = odemeTurleri
@@ -126,7 +125,6 @@ class HesapAlVC: UIViewController {
     
     
     func raporGuncelle(_ rapor:AnlikRapor) {
-        print("Rapor güncell çalıştı")
         var hesaplar = rapor.hesaplar
         var garsonSatislari = rapor.garsonSatislari
         let ciro = rapor.ciro

@@ -48,6 +48,7 @@
 		D985B850244E392C001D559A /* AdisyonumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B84F244E392C001D559A /* AdisyonumTests.swift */; };
 		D985B85B244E392C001D559A /* AdisyonumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B85A244E392C001D559A /* AdisyonumUITests.swift */; };
 		D99B4E31245DE8AF00A6DED8 /* AnlikRapor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B4E30245DE8AF00A6DED8 /* AnlikRapor.swift */; };
+		D9A8255424602D24000EC823 /* Rapor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8255324602D24000EC823 /* Rapor.swift */; };
 		D9B3A6EB24549C22001461B4 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B3A6EA24549C22001461B4 /* DialogView.swift */; };
 		D9D4D6A72450E2CF0069EFE0 /* HucreTumMasalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4D6A62450E2CF0069EFE0 /* HucreTumMasalar.swift */; };
 		D9D78563245D76F400C5D6A2 /* HesapAlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D78562245D76F400C5D6A2 /* HesapAlVC.swift */; };
@@ -125,6 +126,7 @@
 		D985B85A244E392C001D559A /* AdisyonumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdisyonumUITests.swift; sourceTree = "<group>"; };
 		D985B85C244E392C001D559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D99B4E30245DE8AF00A6DED8 /* AnlikRapor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnlikRapor.swift; sourceTree = "<group>"; };
+		D9A8255324602D24000EC823 /* Rapor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rapor.swift; sourceTree = "<group>"; };
 		D9B3A6EA24549C22001461B4 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		D9D4D6A62450E2CF0069EFE0 /* HucreTumMasalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreTumMasalar.swift; sourceTree = "<group>"; };
 		D9D78562245D76F400C5D6A2 /* HesapAlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesapAlVC.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				D942025E244F9F84007045A4 /* Singleton.swift */,
 				D981D3402450E74100B9B3F4 /* Masa.swift */,
 				D99B4E30245DE8AF00A6DED8 /* AnlikRapor.swift */,
+				D9A8255324602D24000EC823 /* Rapor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				D9420257244F4F87007045A4 /* Restoran.swift in Sources */,
 				D91BD527245B08BD00BDFDC6 /* UrunEkleVC.swift in Sources */,
 				D99B4E31245DE8AF00A6DED8 /* AnlikRapor.swift in Sources */,
+				D9A8255424602D24000EC823 /* Rapor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

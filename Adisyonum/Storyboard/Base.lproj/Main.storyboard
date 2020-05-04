@@ -499,7 +499,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbU-oI-aYA">
-                                                    <rect key="frame" x="633" y="10" width="24" height="24"/>
+                                                    <rect key="frame" x="609" y="-2" width="48" height="48"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="lrl-VJ-pIv" eventType="touchUpInside" id="IId-Jb-3KK"/>
@@ -573,7 +573,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-v8-gIT">
-                                        <rect key="frame" x="627" y="5" width="24" height="24"/>
+                                        <rect key="frame" x="603" y="-7" width="48" height="48"/>
                                         <state key="normal" image="menu"/>
                                         <connections>
                                             <action selector="buttonToolbarMenuAc:" destination="Miu-qM-1os" eventType="touchUpInside" id="xZz-eR-3Fc"/>
@@ -616,7 +616,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zr-aj-Cso" userLabel="MenuAc">
-                                                    <rect key="frame" x="633" y="10" width="24" height="24"/>
+                                                    <rect key="frame" x="609" y="-2" width="48" height="48"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="QK3-6Z-YmP" eventType="touchUpInside" id="PE9-tP-FUC"/>
@@ -814,7 +814,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-SM-5uH">
-                                                    <rect key="frame" x="633" y="10" width="24" height="24"/>
+                                                    <rect key="frame" x="609" y="-2" width="48" height="48"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="6fZ-ln-Kyb" eventType="touchUpInside" id="NYH-B2-huN"/>
@@ -933,14 +933,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRo-kg-0hH">
-                                                    <rect key="frame" x="633" y="10" width="24" height="24"/>
+                                                    <rect key="frame" x="609" y="-2" width="48" height="48"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="hz1-fP-w32" eventType="touchUpInside" id="mXf-nl-YYK"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürün Fiyat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdT-ZM-X8C">
-                                                    <rect key="frame" x="542.5" y="13" width="70.5" height="18"/>
+                                                    <rect key="frame" x="518.5" y="13" width="70.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1055,7 +1055,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJu-hw-1E1">
-                                        <rect key="frame" x="633" y="5" width="24" height="24"/>
+                                        <rect key="frame" x="609" y="-7" width="48" height="48"/>
                                         <state key="normal" image="menu"/>
                                         <connections>
                                             <action selector="buttonDropDownMenu:" destination="HAM-k6-rHQ" eventType="touchUpInside" id="ASu-Nw-Mt9"/>
@@ -1491,7 +1491,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-ch-KWU">
-                                                    <rect key="frame" x="643" y="10" width="24" height="24"/>
+                                                    <rect key="frame" x="619" y="-2" width="48" height="48"/>
                                                     <state key="normal" image="menu_siyah"/>
                                                     <connections>
                                                         <action selector="buttonMenuAc:" destination="NHU-ef-cJc" eventType="touchUpInside" id="FiW-BR-ddD"/>
