@@ -9,7 +9,6 @@ class TumMasalarVC: UIViewController {
     @IBOutlet weak var labelLoginGarson: UILabel!
     @IBOutlet weak var buttonDropDownMenu: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var viewTransfer: UIView!
     
     @IBOutlet weak var viewUrunEkle: UIView!
     @IBOutlet weak var progressView: UIProgressView!
@@ -240,7 +239,9 @@ class TumMasalarVC: UIViewController {
         dropDownMenu.anchorView = buttonDropDownMenu
         dropDownMenu.selectionAction = {index, title in
             if index == 0 {     //Masa transefir yap
-                self.viewTransfer.isHidden = false
+                let storyboard = UIStoryboard(name: "Dialog", bundle: .main)
+                let masaTransferiVC = storyboard.instantiateViewController(withIdentifier: "masaTransferiVC") as! MasaTransferiVC
+                self.present(masaTransferiVC, animated: true, completion: nil)
                 
             } else if index == 1 {      //Çıkış Yap
                 self.dismiss(animated: true, completion: nil)
@@ -248,13 +249,6 @@ class TumMasalarVC: UIViewController {
             }
         }
         dropDownMenu.show()
-    }
-    
-    
-    
-    
-    @IBAction func buttonTransferViewGizle(_ sender: Any) {
-        viewTransfer.isHidden = true
     }
     
     

@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/nejatboy/Desktop/iOS Complete/Adisyonum/Adisyonum/Controller/KasaVC/RaporGoruntuleVC.swift">
-   </FileRef>
-   <FileRef
       location = "group:Adisyonum.xcodeproj">
    </FileRef>
    <FileRef

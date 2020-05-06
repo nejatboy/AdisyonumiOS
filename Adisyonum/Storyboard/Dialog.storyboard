@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -8,19 +8,97 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Masa TransferiVC-->
+        <scene sceneID="ORd-GD-5iU">
+            <objects>
+                <viewController storyboardIdentifier="masaTransferiVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="NHn-hI-fIx" customClass="MasaTransferiVC" customModule="Adisyonum" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDY-tW-Lms">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7n-9A-aBH">
+                                <rect key="frame" x="10" y="10" width="21" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ZP9-sX-9qx"/>
+                                </constraints>
+                                <color key="tintColor" name="colorPrimaryDark"/>
+                                <state key="normal" image="arrowshape.turn.up.left" catalog="system"/>
+                                <connections>
+                                    <action selector="buttonGeri:" destination="NHn-hI-fIx" eventType="touchUpInside" id="ksW-6j-lz1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa Transferi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afw-lb-7q6">
+                                <rect key="frame" x="109.5" y="20" width="156.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uM5-Qp-lSo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" name="colorPrimaryDark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seçtiğiniz masaları diğer garsonlardan birine aktarabilirsiniz." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWz-IT-ddh">
+                                <rect key="frame" x="10" y="70" width="355" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Q9S-gp-BNu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bif-O4-fzi">
+                                <rect key="frame" x="308" y="607" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1AJ-N7-av7"/>
+                                </constraints>
+                                <state key="normal" title="Aktar"/>
+                                <connections>
+                                    <action selector="buttonAktar:" destination="NHn-hI-fIx" eventType="touchUpInside" id="tZG-aB-CXk"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btM-qN-yLr">
+                                <rect key="frame" x="0.0" y="150" width="375" height="100"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="btM-qN-yLr" firstAttribute="height" secondItem="JIg-rH-Bv4" secondAttribute="height" multiplier="0.15" id="DZP-Xn-lDv"/>
+                            <constraint firstItem="L7n-9A-aBH" firstAttribute="leading" secondItem="JIg-rH-Bv4" secondAttribute="leading" constant="10" id="JfX-RT-rx4"/>
+                            <constraint firstItem="JIg-rH-Bv4" firstAttribute="bottom" secondItem="bif-O4-fzi" secondAttribute="bottom" constant="30" id="K1M-1K-XRk"/>
+                            <constraint firstItem="L7n-9A-aBH" firstAttribute="top" secondItem="JIg-rH-Bv4" secondAttribute="top" constant="10" id="LT5-j7-B7d"/>
+                            <constraint firstItem="TWz-IT-ddh" firstAttribute="top" secondItem="afw-lb-7q6" secondAttribute="bottom" constant="20" id="LaA-tE-eWf"/>
+                            <constraint firstAttribute="trailing" secondItem="TWz-IT-ddh" secondAttribute="trailing" constant="10" id="Tvb-8M-bku"/>
+                            <constraint firstItem="btM-qN-yLr" firstAttribute="leading" secondItem="JIg-rH-Bv4" secondAttribute="leading" id="WCz-5n-ypL"/>
+                            <constraint firstItem="btM-qN-yLr" firstAttribute="top" secondItem="TWz-IT-ddh" secondAttribute="bottom" constant="20" id="crk-jR-wb1"/>
+                            <constraint firstItem="JIg-rH-Bv4" firstAttribute="trailing" secondItem="bif-O4-fzi" secondAttribute="trailing" constant="30" id="hey-ec-OEM"/>
+                            <constraint firstItem="btM-qN-yLr" firstAttribute="trailing" secondItem="JIg-rH-Bv4" secondAttribute="trailing" id="pyJ-La-HS0"/>
+                            <constraint firstItem="afw-lb-7q6" firstAttribute="top" secondItem="JIg-rH-Bv4" secondAttribute="top" constant="20" id="qmg-RP-3uN"/>
+                            <constraint firstItem="afw-lb-7q6" firstAttribute="centerX" secondItem="bDY-tW-Lms" secondAttribute="centerX" id="rxY-1N-Ph0"/>
+                            <constraint firstItem="TWz-IT-ddh" firstAttribute="leading" secondItem="JIg-rH-Bv4" secondAttribute="leading" constant="10" id="vHk-k6-vba"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JIg-rH-Bv4"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonAktar" destination="bif-O4-fzi" id="2qv-Yu-up8"/>
+                        <outlet property="pickerViewGarsonlar" destination="btM-qN-yLr" id="aJx-59-CEN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mq2-sF-VZw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-972" y="75.112443778110944"/>
+        </scene>
         <!--Garson EkleVC-->
         <scene sceneID="DlL-ft-Nde">
             <objects>
                 <viewController storyboardIdentifier="garsonEkleVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="P0T-Yr-bIT" customClass="GarsonEkleVC" customModule="Adisyonum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glg-mG-89j">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-cc-faE" customClass="YeniDialogView" customModule="Adisyonum" customModuleProvider="target">
-                                <rect key="frame" x="66.5" y="21" width="534" height="333"/>
+                                <rect key="frame" x="37.5" y="167" width="300" height="333"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eylem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVv-co-QGM">
-                                        <rect key="frame" x="244" y="10" width="46.5" height="21"/>
+                                        <rect key="frame" x="127" y="10" width="46.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="747-5A-AiP"/>
                                         </constraints>
@@ -40,7 +118,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Garson Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-GT-qwb">
-                                        <rect key="frame" x="20" y="81" width="494" height="34"/>
+                                        <rect key="frame" x="20" y="81" width="260" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="nng-fO-cWy"/>
                                         </constraints>
@@ -48,7 +126,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Garson Kullanıcı Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kku-an-my2">
-                                        <rect key="frame" x="20" y="145" width="494" height="34"/>
+                                        <rect key="frame" x="20" y="145" width="260" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="OoL-n2-qwD"/>
                                         </constraints>
@@ -56,7 +134,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Garson Şifresi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ple-CY-Mjp">
-                                        <rect key="frame" x="20" y="209" width="494" height="34"/>
+                                        <rect key="frame" x="20" y="209" width="260" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="hdf-Ri-l5z"/>
                                         </constraints>
@@ -64,7 +142,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edR-8s-beo">
-                                        <rect key="frame" x="476" y="293" width="48" height="30"/>
+                                        <rect key="frame" x="242" y="293" width="48" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="x5c-24-fdL"/>
                                         </constraints>
@@ -119,11 +197,11 @@
             <objects>
                 <viewController storyboardIdentifier="kategoriEkleVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="NeL-0k-ew1" customClass="KategoriEkleVC" customModule="Adisyonum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIk-FW-qAX">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoE-jZ-sG4" customClass="YeniDialogView" customModule="Adisyonum" customModuleProvider="target">
-                                <rect key="frame" x="66.5" y="106" width="534" height="163"/>
+                                <rect key="frame" x="37.5" y="252" width="300" height="163"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxh-Ff-prP">
                                         <rect key="frame" x="5" y="5" width="21" height="22"/>
@@ -137,7 +215,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1x-Ec-2Mm">
-                                        <rect key="frame" x="476" y="123" width="48" height="30"/>
+                                        <rect key="frame" x="242" y="123" width="48" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="3rE-mb-k4i"/>
                                         </constraints>
@@ -147,7 +225,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qp-Ph-1xC">
-                                        <rect key="frame" x="246" y="8" width="42" height="21"/>
+                                        <rect key="frame" x="129" y="8" width="42" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="yKL-wY-ncr"/>
                                         </constraints>
@@ -156,7 +234,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kategori Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7kp-Oh-VI9">
-                                        <rect key="frame" x="20" y="59" width="494" height="34"/>
+                                        <rect key="frame" x="20" y="59" width="260" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -198,11 +276,11 @@
             <objects>
                 <viewController storyboardIdentifier="urunEkleVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="5PK-l4-LvP" customClass="UrunEkleVC" customModule="Adisyonum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Tw-Uf-YEE">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R3-ZO-HDj">
-                                <rect key="frame" x="66.5" y="63" width="534" height="249"/>
+                                <rect key="frame" x="37.5" y="209" width="300" height="249"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-Ml-bdz">
                                         <rect key="frame" x="8" y="8" width="21" height="22"/>
@@ -216,7 +294,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eylem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9Y-to-Xdh">
-                                        <rect key="frame" x="244" y="10" width="46.5" height="21"/>
+                                        <rect key="frame" x="127" y="10" width="46.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="dsj-Ah-Gxu"/>
                                         </constraints>
@@ -225,7 +303,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRo-nk-YIe">
-                                        <rect key="frame" x="20" y="81" width="494" height="34"/>
+                                        <rect key="frame" x="20" y="81" width="260" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Pzb-8l-dhR"/>
                                         </constraints>
@@ -233,7 +311,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Fiyat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-tE-PzY">
-                                        <rect key="frame" x="20" y="145" width="494" height="34"/>
+                                        <rect key="frame" x="20" y="145" width="260" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="VxI-De-dNr"/>
                                         </constraints>
@@ -241,7 +319,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POw-v2-8Q4">
-                                        <rect key="frame" x="488" y="209" width="36" height="30"/>
+                                        <rect key="frame" x="254" y="209" width="36" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="KqV-oK-zJK"/>
                                         </constraints>
@@ -292,11 +370,11 @@
             <objects>
                 <viewController storyboardIdentifier="hesapAlVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="INY-2u-cbs" customClass="HesapAlVC" customModule="Adisyonum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mf8-qV-ki1">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Jf-QM-DHy">
-                                <rect key="frame" x="10" y="92.5" width="647" height="41"/>
+                                <rect key="frame" x="10" y="180" width="355" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8l2-3h-7Rg"/>
                                 </constraints>
@@ -315,7 +393,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-y1-ksd">
-                                <rect key="frame" x="286" y="10" width="95.5" height="30"/>
+                                <rect key="frame" x="140" y="10" width="95.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -332,25 +410,25 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRF-kG-D3d">
-                                <rect key="frame" x="590" y="325" width="57" height="30"/>
+                                <rect key="frame" x="298" y="617" width="57" height="30"/>
                                 <state key="normal" title="Tutarı Al"/>
                                 <connections>
                                     <action selector="buttonTutariAl:" destination="INY-2u-cbs" eventType="touchUpInside" id="JEb-sO-2hb"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tutar Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4f-I1-jwB">
-                                <rect key="frame" x="20" y="233.5" width="200" height="34"/>
+                                <rect key="frame" x="20" y="321" width="112.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kalan Tutar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6e-Ti-egF">
-                                <rect key="frame" x="20" y="182.5" width="91" height="21"/>
+                                <rect key="frame" x="20" y="270" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VL-Wf-EVD">
-                                <rect key="frame" x="121" y="182.5" width="24" height="21"/>
+                                <rect key="frame" x="121" y="270" width="24" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -387,38 +465,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGk-hS-i0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3332.3838080959522" y="69.599999999999994"/>
-        </scene>
-        <!--Side MenuVC-->
-        <scene sceneID="HWO-ZI-U21">
-            <objects>
-                <viewController storyboardIdentifier="sideMenuVC" id="6JR-1G-Iw1" customClass="SideMenuVC" customModule="Adisyonum" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GEG-qU-o3P">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAq-po-IVI">
-                                <rect key="frame" x="-10" y="0.0" width="200" height="375"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="sAq-po-IVI" firstAttribute="top" secondItem="34w-nq-JIb" secondAttribute="top" id="8IZ-bf-yMM"/>
-                            <constraint firstItem="sAq-po-IVI" firstAttribute="leading" secondItem="GEG-qU-o3P" secondAttribute="leading" constant="-10" id="IAB-II-ern"/>
-                            <constraint firstItem="34w-nq-JIb" firstAttribute="bottom" secondItem="sAq-po-IVI" secondAttribute="bottom" id="XKe-cN-KSy"/>
-                            <constraint firstItem="sAq-po-IVI" firstAttribute="width" secondItem="34w-nq-JIb" secondAttribute="width" multiplier="0.3" id="uGE-bp-MD1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="34w-nq-JIb"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FXO-vk-03l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4207" y="70"/>
         </scene>
     </scenes>
     <resources>

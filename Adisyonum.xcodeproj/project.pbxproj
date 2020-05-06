@@ -38,7 +38,6 @@
 		D965A432245C48F600FF0577 /* HucreMasa_KasaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */; };
 		D97501F7245F2D1000D5CA61 /* AnlikRaporalarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97501F6245F2D1000D5CA61 /* AnlikRaporalarVC.swift */; };
 		D97BFFF92455A9BF00580C4C /* HucreRestoran.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */; };
-		D981B0BD245EF6B2004067E0 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981B0BC245EF6B2004067E0 /* SideMenuVC.swift */; };
 		D981B0BF245F01BD004067E0 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981B0BE245F01BD004067E0 /* SideMenuView.swift */; };
 		D981D3412450E74100B9B3F4 /* Masa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981D3402450E74100B9B3F4 /* Masa.swift */; };
 		D985B839244E3929001D559A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B838244E3929001D559A /* AppDelegate.swift */; };
@@ -49,6 +48,7 @@
 		D985B845244E392C001D559A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D985B843244E392C001D559A /* LaunchScreen.storyboard */; };
 		D985B850244E392C001D559A /* AdisyonumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B84F244E392C001D559A /* AdisyonumTests.swift */; };
 		D985B85B244E392C001D559A /* AdisyonumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D985B85A244E392C001D559A /* AdisyonumUITests.swift */; };
+		D998FB1B24615E46004097B7 /* MasaTransferiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998FB1A24615E46004097B7 /* MasaTransferiVC.swift */; };
 		D99B4E31245DE8AF00A6DED8 /* AnlikRapor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B4E30245DE8AF00A6DED8 /* AnlikRapor.swift */; };
 		D9A8255424602D24000EC823 /* Rapor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8255324602D24000EC823 /* Rapor.swift */; };
 		D9B3A6EB24549C22001461B4 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B3A6EA24549C22001461B4 /* DialogView.swift */; };
@@ -112,7 +112,6 @@
 		D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreMasa_KasaVC.swift; sourceTree = "<group>"; };
 		D97501F6245F2D1000D5CA61 /* AnlikRaporalarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnlikRaporalarVC.swift; sourceTree = "<group>"; };
 		D97BFFF82455A9BF00580C4C /* HucreRestoran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HucreRestoran.swift; sourceTree = "<group>"; };
-		D981B0BC245EF6B2004067E0 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		D981B0BE245F01BD004067E0 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		D981D3402450E74100B9B3F4 /* Masa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masa.swift; sourceTree = "<group>"; };
 		D985B835244E3929001D559A /* Adisyonum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adisyonum.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +128,7 @@
 		D985B856244E392C001D559A /* AdisyonumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdisyonumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D985B85A244E392C001D559A /* AdisyonumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdisyonumUITests.swift; sourceTree = "<group>"; };
 		D985B85C244E392C001D559A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D998FB1A24615E46004097B7 /* MasaTransferiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasaTransferiVC.swift; sourceTree = "<group>"; };
 		D99B4E30245DE8AF00A6DED8 /* AnlikRapor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnlikRapor.swift; sourceTree = "<group>"; };
 		D9A8255324602D24000EC823 /* Rapor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rapor.swift; sourceTree = "<group>"; };
 		D9B3A6EA24549C22001461B4 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
@@ -225,7 +225,6 @@
 			children = (
 				D965A431245C48F600FF0577 /* HucreMasa_KasaVC.swift */,
 				D9D78562245D76F400C5D6A2 /* HesapAlVC.swift */,
-				D981B0BC245EF6B2004067E0 /* SideMenuVC.swift */,
 			);
 			path = Kasa;
 			sourceTree = "<group>";
@@ -281,8 +280,8 @@
 		D985B837244E3929001D559A /* Adisyonum */ = {
 			isa = PBXGroup;
 			children = (
-				D963281024586C0D001E78CD /* Storyboard */,
 				D9420254244F314D007045A4 /* GoogleService-Info.plist */,
+				D963281024586C0D001E78CD /* Storyboard */,
 				D985B86B244E396B001D559A /* Controller */,
 				D985B86A244E395E001D559A /* View */,
 				D985B869244E3952001D559A /* Model */,
@@ -367,6 +366,7 @@
 				D95E2FF124520D13009E6F8E /* HucreSiparis.swift */,
 				D901E7A624535D420058A388 /* HucreAcikMasa.swift */,
 				D90964F1245317A400A010CB /* HucreGoruntulenenUrun.swift */,
+				D998FB1A24615E46004097B7 /* MasaTransferiVC.swift */,
 			);
 			path = Garson;
 			sourceTree = "<group>";
@@ -621,6 +621,7 @@
 				D901E7A724535D420058A388 /* HucreAcikMasa.swift in Sources */,
 				D91771C52458D5F500136463 /* HucreKategori.swift in Sources */,
 				D942025B244F653E007045A4 /* Kategori.swift in Sources */,
+				D998FB1B24615E46004097B7 /* MasaTransferiVC.swift in Sources */,
 				D9E35D4B2459F83800AECD91 /* HucreUrun_Yonetici.swift in Sources */,
 				D95E2FF024520C38009E6F8E /* HucreUrun.swift in Sources */,
 				D942025D244F65AB007045A4 /* Urun.swift in Sources */,
@@ -628,7 +629,6 @@
 				D97501F7245F2D1000D5CA61 /* AnlikRaporalarVC.swift in Sources */,
 				D92DE945246071AF00C27355 /* RaporGoruntuleVC.swift in Sources */,
 				D942025F244F9F84007045A4 /* Singleton.swift in Sources */,
-				D981B0BD245EF6B2004067E0 /* SideMenuVC.swift in Sources */,
 				D90964F2245317A400A010CB /* HucreGoruntulenenUrun.swift in Sources */,
 				D90866AC24503E4D00554691 /* KasaVC.swift in Sources */,
 				D981D3412450E74100B9B3F4 /* Masa.swift in Sources */,
