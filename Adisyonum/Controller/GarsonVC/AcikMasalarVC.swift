@@ -27,7 +27,6 @@ class AcikMasalarVC: UIViewController {
         super.viewDidLoad()
         
         labelLoginGarson.text = singleton.loginGarson!.garsonAd
-        acikMasalarimiGetir(singleton.loginGarson!.garsonId)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -40,8 +39,7 @@ class AcikMasalarVC: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        veriDegisirseArayuzuGuncelle(singleton.loginGarson!.restoranId)
-        
+        acikMasalarimiGetir(singleton.loginGarson!.garsonId)
         NotificationCenter.default.addObserver(self, selector: #selector(bildirimiYakala(notification:)), name: .masaTasimasiYapilacak, object: nil)    //HucreAcikMasa'dan gelen bildirimi yakala
     }
     
@@ -49,11 +47,11 @@ class AcikMasalarVC: UIViewController {
     
     
     func acikMasalarimiGetir(_ garsonId:String) {
-        acikMasalar.removeAll()
-        
         let query = referenceMasalar.whereField("garsonId", isEqualTo: garsonId).order(by: "masaNo")
         query.addSnapshotListener { (queySnapshots, error) in
             if error == nil && queySnapshots != nil {
+                self.acikMasalar.removeAll()
+                
                 for document in queySnapshots!.documents {
                     let masaId = document.documentID
                     let masaNo = document.get("masaNo") as! Int

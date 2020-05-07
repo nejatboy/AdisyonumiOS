@@ -37,6 +37,8 @@ class TumMasalarVC: UIViewController {
     
     var goruntulenenUrunler = [Urun]()
     
+    var acikMasalar = [Masa]()      //Masa transferi için
+    
     
     
     
@@ -70,7 +72,7 @@ class TumMasalarVC: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        veriDegisirseArayuzuGuncelle(singleton.loginGarson!.restoranId)
+        acikMasalariGetirByRestoranId(singleton.loginGarson!.restoranId)
     }
     
     
@@ -89,12 +91,13 @@ class TumMasalarVC: UIViewController {
     
     
     func acikMasalariGetirByRestoranId(_ restoranId:String) {
-        tumMasalar.removeAll()
-        self.masalariOlustur()
-        
-        let query = referenceMasalar.whereField("restoranId", isEqualTo: restoranId)
-        query.getDocuments { (querySnapshots, error) in
+        let query = referenceMasalar.whereField("restoranId", isEqualTo: restoranId).order(by: "masaNo", descending: false)
+        query.addSnapshotListener { (querySnapshots, error) in
             if querySnapshots != nil {
+                self.acikMasalar.removeAll()
+                self.tumMasalar.removeAll()
+                self.masalariOlustur()
+                
                 for document in querySnapshots!.documents {
                     let masaId = document.documentID
                     let masaNo = document.get("masaNo") as! Int
@@ -104,19 +107,16 @@ class TumMasalarVC: UIViewController {
                     let garsonId = document.get("garsonId") as! String
                     let urunler = document.get("urunler") as! [String]
                     
-                    self.tumMasalar[masaNo - 1] = Masa(masaId, masaNo, masaTutar, masaAcik, masaYazdirildi, garsonId, restoranId, urunler)
+                    let masa = Masa(masaId, masaNo, masaTutar, masaAcik, masaYazdirildi, garsonId, restoranId, urunler)
+                    
+                    self.tumMasalar[masaNo - 1] = masa
+                    
+                    if garsonId == self.singleton.loginGarson!.garsonId {
+                        self.acikMasalar.append(masa)
+                    }
                 }
                 self.collectionView.reloadData()
             }
-        }
-    }
-    
-    
-    
-    
-    func veriDegisirseArayuzuGuncelle(_ restoranId:String) {
-        referenceMasalar.whereField("restoranId", isEqualTo: restoranId).addSnapshotListener { (querySnapshots, error) in
-            self.acikMasalariGetirByRestoranId(restoranId)
         }
     }
     
@@ -238,9 +238,10 @@ class TumMasalarVC: UIViewController {
     @IBAction func buttonDropDownMenu(_ sender: Any) {
         dropDownMenu.anchorView = buttonDropDownMenu
         dropDownMenu.selectionAction = {index, title in
-            if index == 0 {     //Masa transefir yap
+            if index == 0 {     //Masa transferi yap
                 let storyboard = UIStoryboard(name: "Dialog", bundle: .main)
                 let masaTransferiVC = storyboard.instantiateViewController(withIdentifier: "masaTransferiVC") as! MasaTransferiVC
+                masaTransferiVC.acikMasalar = self.acikMasalar
                 self.present(masaTransferiVC, animated: true, completion: nil)
                 
             } else if index == 1 {      //Çıkış Yap
